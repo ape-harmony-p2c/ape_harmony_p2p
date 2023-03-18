@@ -14,5 +14,12 @@ The primary purpose of funding rounds is to utilize the IP of the NFT collection
 
 ### FUNDING HUBS
 
-Bored Ape holder Jason goes to eg. bayc.p2c.apeharmony.com where he sees what NFTs he holds which give him member privileges in the BAYC funding hub. This defaults to any NFT in the BAYC collection, but is set by the NFT collection's deployer wallet or any wallets they choose to delegate that power to. For example, the BAYC funding hub can be configured to give member privileges to anyone with a BAYC, MAYC or Otherside Deed, or it can be restricted to only owners of BAYC NFTs etc.
+Example: Bored Ape holder Jason goes to eg. bayc.p2c.apeharmony.com where he sees what NFTs he holds which give him member privileges in the BAYC funding hub. This defaults to any NFT in the BAYC collection, but is set by the NFT collection's deployer wallet or any wallets they choose to delegate that power to. For example, the BAYC funding hub can be configured to give member privileges to anyone with a BAYC, MAYC or Otherside Deed, or it can be restricted to only owners of BAYC NFTs etc.
 
+### FUNDING ROUNDS
+
+Any visitor to bayc.p2c.apeharmony.com will see a list of topics similar to reddit threads, but all threads are actually funding rounds associated with the BAYC collection. These rounds are divided into two categories: COMPLETED and ACTIVE. 
+
+### MEMBER PRIVILEGES
+
+As the owner of a BAYC NFT Jason will bot only see the active and created rounds on the BAYC funding hub, he will also able to create a new round. Rounds are just posts
