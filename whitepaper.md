@@ -45,7 +45,9 @@ As mentioned, the default configuartion is that anyone can contribute to any fun
 
 When a user contributes to a round he receives ERC20 tokens specific to that round in amount proportional to his contributions. When the project distributes value back to the contributors of the round, the user receives an amopunt in proportion to his tokens. These ERC20 tokens are how the contract keeps track of what each contributor is entitled to.
 
-The ERC20 tokens of each round can themselves be traded on the open market. Although we do not ourselves fund liquidity pools for these tokens which would directly create monetary value (as the primary purpose of these tokens is to create value in our own ecosystem ie. the "Disney dollars" model) it is possible that the round tokens themselves could have value outside our ecosystem as well through trading by users and other third parties.
+The ERC20 tokens of each round can themselves be traded on the open market. Although we do not ourselves fund liquidity pools for these tokens which would directly create monetary value, as the primary purpose of these tokens is to create value in our own ecosystem ie. the "Disney dollars" model, it is possible that the round tokens themselves could have value outside our ecosystem as well through trading by users and other third parties.
+
+### END TO END FINANCING FOR CREATORS
 
 
 
