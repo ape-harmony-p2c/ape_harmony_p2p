@@ -1,6 +1,14 @@
-## Ape Harmony P2C Funding
+## APE HARMONY P2C FUNDING
+A kickstarter model funding ecosystem for creators and members of NFT communities.
 
-### ABSTRACT
+### END TO END FINANCING FOR CREATORS
+
+
+
+
+### INCREASE IP VALUE FOR NFT COLLECTIONS
+
+
 
 Every NFT collection can create its own funding hub on Ape Harmony P2C simply by connecting any wallet with an NFT from that collection to the Ape Harmony contract. Only owners of that specific NFT have access to post requests for funding but all users have access to view the content on the funding hub as well as contribute funds to funding rounds. 
 
@@ -47,7 +55,7 @@ When a user contributes to a round he receives ERC20 tokens specific to that rou
 
 The ERC20 tokens of each round can themselves be traded on the open market. Although we do not ourselves fund liquidity pools for these tokens which would directly create monetary value, as the primary purpose of these tokens is to create value in our own ecosystem ie. the "Disney dollars" model, it is possible that the round tokens themselves could have value outside our ecosystem as well through trading by users and other third parties.
 
-### END TO END FINANCING FOR CREATORS
+
 
 
 
