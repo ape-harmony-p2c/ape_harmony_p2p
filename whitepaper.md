@@ -18,8 +18,8 @@ Example: Bored Ape holder Jason goes to eg. bayc.p2c.apeharmony.com where he see
 
 ### FUNDING ROUNDS
 
-Any visitor to bayc.p2c.apeharmony.com will see a list of topics similar to reddit threads, but all threads are actually funding rounds associated with the BAYC collection. These rounds are divided into two categories: COMPLETED and ACTIVE. 
+Any visitor to bayc.p2c.apeharmony.com will see a list of topics similar to reddit threads, but all threads are actually funding rounds associated with the BAYC collection. These rounds are divided into two categories: COMPLETED and ACTIVE. Except for comments, the only type of posts allowed in funding hubs are rounds ie. requests for funding.
 
 ### MEMBER PRIVILEGES
 
-As the owner of a BAYC NFT Jason will bot only see the active and created rounds on the BAYC funding hub, he will also able to create a new round. Rounds are just posts
+As a Bored Ape owner Jason will not only see the active and created rounds on the BAYC funding hub, he will also able to create a new round. As mentioned rounds are just posts or topics in the BAYC funding hub. 
