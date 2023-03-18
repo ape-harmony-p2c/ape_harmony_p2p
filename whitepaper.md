@@ -18,7 +18,7 @@ The primary privilege for holders of an NFT in the collection vs non-holders is 
 
 All member privilege configurations are user defined. This defaults to include the holder of any NFT in the collection (for example any BAYC holder) but as this is set by the NFT collection's deployer wallet, the BAYC funding hub can also be configured to give member privileges to anyone with a BAYC, MAYC, Otherside Deed, or any other NFT as well.
 
-### ROUNDS LIST
+### ROUNDS
 
 Upon entering the funding hub of an NFT collection on Ape Harmony visitor will see a list of funding rounds ie. requests for funding associated with that NFT collection eg. BAYC. All rounds appear as posts and are organized in a list like a Reddit thread. Posts of new rounds can be seen as the first post in a thread and every post after that a comment on that primary post. Again only holders of that NFT collection are allowed to create rounds ie. start a thread, but anyone can comment in the thread after it is created. 
 
@@ -37,12 +37,18 @@ Completed rounds are filtered as follows:
 3. Recent
 4. Most popular
 
+### HOW IT WORKS - ECONOMICS
+
+Every round must include the amount the creator is seeking and the formula for distribution of value from the project being funded. This can be in either ETH, an ERC20 token specific to the funding hub's NFT collection like for example the ERC20 received in exchange for depositing your NFT on "Pooled NFTs", or some other form of value such as NFTs with some utility attached to it.
+
+### HOW IT WORKS - TECHNICAL
+
+
+
 ### COMMENTS
 
 If a visitor to the BAYC funding hub on Ape Harmony is not a Bored Ape holder, he will not be allowed to create new rounds, and therefore the only type of posts he can submit are comments on already created rounds. This includes both active and completed rounds, but as the purpose of these threads are to support and inquire about projects seeking funding, active rounds will have much higher activity than completed rounds.
 
-
-As a Bored Ape owner Jason will not only see the active and created rounds (posts) on the BAYC funding hub, he will also able to create a new round. As mentioned previously, funding rounds are requests for financing which are just posts in the BAYC funding hub. Every new round must include the amount the creator is seeking in either ETH or an ERC20 token specific to the funding hub's NFT collection like for example the ERC20 received in exchange for depositing your NFT on "Pooled NFTs".
 
 
 
