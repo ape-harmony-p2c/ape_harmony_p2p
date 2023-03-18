@@ -35,7 +35,7 @@ Completed rounds are filtered as follows:
 3. Recent
 4. Most popular
 
-### Comments
+### COMMENTS
 
 If a visitor to the BAYC funding hub on Ape Harmony is not a Bored Ape holder, he will not be allowed to create new rounds, and therefore the only type of posts he can submit are comments on already created rounds. This includes both active and completed rounds, but as the purpose of these threads are to support and inquire about projects seeking funding, active rounds will have much higher activity than completed rounds.
 
