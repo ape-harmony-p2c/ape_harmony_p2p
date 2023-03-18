@@ -12,13 +12,13 @@ Every NFT collection can create its own funding hub on Ape Harmony P2C simply by
 
 The primary purpose of funding rounds is to utilize the IP of the NFT collection and in so doing provide utility and increase the value of the entire NFT collection, but the rounds can be used for whatever the funding proposer chooses. This kickstarter style funding is just one of the many ways that Ape Harmony will provide functionality to NFT holders for monetization and leveraging of the value of their NFTs.
 
-Some other pieces of the NFT finance pie that Ape Harmony is working to deliver include P2P loans, equity backed liens, futures and options, packaged assets and insurance. As many NFTs are worth as much as a house, it just makes sense that they be monetized as such.
+Ape Harmony is working to deliver a wide array of derivatives and other financial instruments from NFTs including P2P loans, equity backed liens, futures and options, packaged assets and insurance. Many NFTs are worth as much as a house, so it makes sense that they should be monetized as such.
 
 ### FUNDING HUBS
 
-Funding hubs are the primary point of reference for every NFT and its community. For example BAYC will have its own subdomain bayc.p2c.apeharmony.com where all the comnunity funding functionality of Ape Harmony is available to any holder of a BAYC NFT.
+Funding hubs are the primary point of reference for every NFT and its community on the Ape Harmony ecosystem. For example BAYC will have its own subdomain p2c.bayc.apeharmony.com where all comnunity funding functionality is available to the holder of any BAYC NFT.
 
-For example Bored Ape holder Jason goes to eg. bayc.p2c.apeharmony.com where he sees what NFTs he holds which give him member privileges in the BAYC funding hub. This defaults to any NFT in the BAYC collection, but is set by the NFT collection's deployer wallet or any wallets they choose to delegate that power to. For example, the BAYC funding hub can be configured to give member privileges to anyone with a BAYC, MAYC or Otherside Deed, or it can be restricted to only owners of BAYC NFTs etc.
+For example Bored Ape holder Jason goes to eg. p2c.bayc.apeharmony.com where he sees what NFTs he holds which give him member privileges in the BAYC funding hub. This defaults to any NFT in the BAYC collection, but is set by the NFT collection's deployer wallet or any wallets they choose to delegate that power to. For example, the BAYC funding hub can be configured to give member privileges to anyone with a BAYC, MAYC or Otherside Deed, or it can be restricted to only owners of BAYC NFTs etc.
 
 Any visitor to bayc.p2c.apeharmony.com will see a list of funding rounds ie. requests for funding associated with the BAYC collection. These rounds are organized like threads similar to Reddit, and are divided into two categories: COMPLETED and ACTIVE. Except for comments, the only type of posts allowed in funding hubs are rounds ie. requests for funding.
 
