@@ -37,11 +37,15 @@ Completed rounds are filtered as follows:
 3. Recent
 4. Most popular
 
-### HOW IT WORKS - ECONOMICS
+### HOW IT WORKS
 
 Every round must include the amount the creator is seeking and the formula for distribution of value from the project being funded. This can be in either ETH, an ERC20 token specific to the funding hub's NFT collection like for example the ERC20 received in exchange for depositing your NFT on "Pooled NFTs", or some other form of value such as NFTs with some utility attached to it.
 
-### HOW IT WORKS - TECHNICAL
+As mentioned, the default configuartion is that anyone can contribute to any funding round. This can be changed to only allow contributions from specific users based on NFT holdings or other criteria, but as the goal is to bring in more funding not less, the primary use case will be that anyone is allowed to contribute to any funding round.
+
+When a user contributes to a round he receives ERC20 tokens specific to that round in amount proportional to his contributions. When the project distributes value back to the contributors of the round, the user receives an amopunt in proportion to his tokens. These ERC20 tokens are how the contract keeps track of what each contributor is entitled to.
+
+The ERC20 tokens of each round can themselves be traded on the open market. Although we do not ourselves fund liquidity pools for these tokens which would directly create monetary value (as the primary purpose of these tokens is to create value in our own ecosystem ie. the "Disney dollars" model) it is possible that the round tokens themselves could have value outside our ecosystem as well through trading by users and other third parties.
 
 
 
