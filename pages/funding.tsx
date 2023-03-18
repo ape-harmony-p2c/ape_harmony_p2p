@@ -40,14 +40,17 @@ const project = {
         {
             name: "Alice",
             amount: "10%",
+            image: 'https://bit.ly/dan-abramov',
         },
         {
             name: "Bob",
             amount: "5%",
+            image: 'https://bit.ly/dan-abramov',
         },
         {
             name: "Chuck",
             amount: "15%",
+            image: 'https://bit.ly/dan-abramov',
         }
     ],
     comments: [
@@ -160,6 +163,7 @@ const Funding: NextPage = () => {
                     <Box bg='tomato' w='100%' p={4} color='white'>
                         {project && project.funders && project.funders.map((funder) => (
                             <Flex border="1px" align="center" key={uuidv4()}>
+                                <Image boxSize='50px' src={funder.image} alt='Dan Abramov' />
                                 <Text fontFamily='Syne Tactile' fontSize='1.25rem' color='white' ml='.5rem' >{funder.name}</Text>
                                 <Text fontFamily='Syne Tactile' fontSize='1.25rem' color='white' ml='.5rem' >{funder.amount}</Text>
                             </Flex>
