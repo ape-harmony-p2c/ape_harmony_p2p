@@ -16,7 +16,7 @@ Some other pieces of the NFT finance pie that Ape Harmony is working to deliver 
 
 ### FUNDING HUBS
 
-
+Funding hubs are the primary point of reference for every NFT and its community. For example BAYC will have its own subdomain bayc.p2c.apeharmony.com where all the comnunity funding functionality of Ape Harmony is available to any holder of a BAYC NFT.
 
 For example Bored Ape holder Jason goes to eg. bayc.p2c.apeharmony.com where he sees what NFTs he holds which give him member privileges in the BAYC funding hub. This defaults to any NFT in the BAYC collection, but is set by the NFT collection's deployer wallet or any wallets they choose to delegate that power to. For example, the BAYC funding hub can be configured to give member privileges to anyone with a BAYC, MAYC or Otherside Deed, or it can be restricted to only owners of BAYC NFTs etc.
 
