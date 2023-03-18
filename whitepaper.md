@@ -14,7 +14,9 @@ Funding hubs are the primary point of reference for every NFT and its community 
 
 ### MEMBER PRIVILEGES
 
-Member priveleges default to include the holder of any NFT in the collection (for example any BAYC holder) but as this is set by the NFT collection's deployer wallet, the BAYC funding hub can also be configured to give member privileges to anyone with a BAYC, MAYC, Otherside Deed, or any other NFT as well. All member privilege configurations are user defined. The primary privilege for holders of an NFT in the collection vs non-holders is the ability to create new rounds ie. requests for funding. In all other ways the UI will appear the same for both holders and non-holders.
+The primary privilege for holders of an NFT in the collection vs non-holders is the ability to create new rounds ie. requests for funding. In all other ways the UI will appear the same for both holders and non-holders.
+
+All member privilege configurations are user defined. This defaults to include the holder of any NFT in the collection (for example any BAYC holder) but as this is set by the NFT collection's deployer wallet, the BAYC funding hub can also be configured to give member privileges to anyone with a BAYC, MAYC, Otherside Deed, or any other NFT as well.
 
 ### ROUNDS LIST
 
