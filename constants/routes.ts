@@ -1,2 +1,2 @@
 export const HOME = '/'
-export const FUNDINGS = 'funding'
+export const LOOKING_FOR = '/looking-for'
