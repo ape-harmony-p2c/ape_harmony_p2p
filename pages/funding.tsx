@@ -15,10 +15,18 @@ import {
     Text,
     Show,
     Hide,
-    Spacer 
+    Spacer,
+    Slider,
+    SliderTrack,
+    SliderFilledTrack,
+    SliderThumb,
+    SliderMark, 
+    Tooltip
 } from '@chakra-ui/react'
+import { SearchIcon, ArrowUpIcon, ArrowDownIcon } from '@chakra-ui/icons';
 import { NextPage } from 'next'
 import { v4 as uuidv4 } from 'uuid';
+import { useState } from 'react';
 
 const description = `Sample project description. This project is going to change the world. I am taking this project to the moon 🚀🚀🚀 so you better invest now.`
 
@@ -59,20 +67,71 @@ const project = {
 
 }
 
+function SliderThumbWithTooltip() {
+    const [sliderValue, setSliderValue] = useState(5)
+    const [showTooltip, setShowTooltip] = useState(false)
+    return (
+      <Slider
+        id='slider'
+        defaultValue={5}
+        min={0}
+        max={100}
+        colorScheme='teal'
+        onChange={(v) => setSliderValue(v)}
+        onMouseEnter={() => setShowTooltip(true)}
+        onMouseLeave={() => setShowTooltip(false)}
+      >
+        <SliderMark value={25} mt='1' ml='-2.5' fontSize='sm'>
+          25%
+        </SliderMark>
+        <SliderMark value={50} mt='1' ml='-2.5' fontSize='sm'>
+          50%
+        </SliderMark>
+        <SliderMark value={75} mt='1' ml='-2.5' fontSize='sm'>
+          75%
+        </SliderMark>
+        <SliderTrack>
+          <SliderFilledTrack />
+        </SliderTrack>
+        <Tooltip
+          hasArrow
+          bg='teal.500'
+          color='white'
+          placement='top'
+          isOpen={showTooltip}
+          label={`${sliderValue}`}
+        >
+          <SliderThumb />
+        </Tooltip>
+      </Slider>
+    )
+  }
+
 
 
 const Funding: NextPage = () => {
+    const [sliderValue, setSliderValue] = useState(5)
+    const [showTooltip, setShowTooltip] = useState(false)
     return (
         <Flex justify="center" height="100%" mt="40">
             <Flex align="center" direction="column" width="60%">
                 <Text fontFamily='Syne Tactile' fontSize='1.25rem' color='black' ml='.5rem'>{project.title}</Text>
                 <Spacer />
-                <Box bg='blue.500' w='100%' p={4} color='white' height="100%">
+                <Box bg='purple.500' w='100%' p={4} color='white' height="100%">
                     <Flex align="center" direction="column" justify="space-between" height="100%">
                         <Text fontFamily='Syne Tactile' fontSize='1.25rem' color='white' ml='.5rem'>{project.description}</Text>
                         <Spacer />
                         <Flex justify="start" width="100%" mt="10">
-                            <Button color="black">Upvote</Button>
+                            <IconButton
+                            colorScheme='blue'
+                            aria-label='Search database'
+                            icon={<ArrowUpIcon />}
+                            />
+                            <IconButton
+                            colorScheme='red'
+                            aria-label='Search database'
+                            icon={<ArrowDownIcon />}
+                            />                        
                         </Flex>
                     </Flex>
                 </Box>
@@ -87,10 +146,11 @@ const Funding: NextPage = () => {
                 <Spacer />
                 <Box bg='yellow.500' w='100%' p={4} color='white' height="100%">
                     <Flex align="center" direction="column" justify="space-between" height="100%">
-                        <Text fontFamily='Syne Tactile' fontSize='1.25rem' color='white' ml='.5rem'>Uniswap Box</Text>
+                        <Text fontFamily='Syne Tactile' fontSize='1.25rem' color='white' ml='.5rem'>Fund this Project</Text>
                         <Spacer />
+                        <SliderThumbWithTooltip />
                         <Flex justify="start" width="100%" mt="10">
-                            <Button color="black">Swap</Button>
+                            <Button color="black">Fund!</Button>
                         </Flex>
                     </Flex>
                 </Box>
@@ -99,7 +159,7 @@ const Funding: NextPage = () => {
                     <Text fontFamily='Syne Tactile' fontSize='1.25rem' color='black' ml='.5rem'>Funders</Text>
                     <Box bg='tomato' w='100%' p={4} color='white'>
                         {project && project.funders && project.funders.map((funder) => (
-                            <Flex align="center" key={uuidv4()}>
+                            <Flex border="1px" align="center" key={uuidv4()}>
                                 <Text fontFamily='Syne Tactile' fontSize='1.25rem' color='white' ml='.5rem' >{funder.name}</Text>
                                 <Text fontFamily='Syne Tactile' fontSize='1.25rem' color='white' ml='.5rem' >{funder.amount}</Text>
                             </Flex>
@@ -111,7 +171,7 @@ const Funding: NextPage = () => {
                     <Text fontFamily='Syne Tactile' fontSize='1.25rem' color='black' ml='.5rem'>Comments</Text>
                     <Box bg='orange.500' w='100%' p={4} color='white'>
                         {project && project.comments && project.comments.map((comment) => (
-                            <Flex align="center" key={uuidv4()}>
+                            <Flex border="1px" align="center" key={uuidv4()}>
                                 <Text fontFamily='Syne Tactile' fontSize='1.25rem' color='white' ml='.5rem' >{comment.name}</Text>
                                 <Text fontFamily='Syne Tactile' fontSize='1.25rem' color='white' ml='.5rem' >{comment.text}</Text>
                             </Flex>
