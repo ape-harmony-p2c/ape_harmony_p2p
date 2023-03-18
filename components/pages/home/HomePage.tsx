@@ -8,6 +8,11 @@ import {
 
 export const HomePage = () => {
     return (
-        <Text>Home</Text>
+        <Flex justify="center">
+            <Flex align="center" direction="column" height="100vh" width="60vw">
+                <Text>Home</Text>
+            </Flex>
+        </Flex>
+
     )
 }
