@@ -16,17 +16,35 @@ Ape Harmony is working to deliver a wide array of derivatives and other financia
 
 ### FUNDING HUBS
 
-Funding hubs are the primary point of reference for every NFT and its community on the Ape Harmony ecosystem. For example BAYC will have its own subdomain p2c.bayc.apeharmony.com where all comnunity funding functionality is available to the holder of any BAYC NFT.
+Funding hubs are the primary point of reference for every NFT and its community on the Ape Harmony ecosystem. For example BAYC will have its own subdomain p2c.bayc.apeharmony.com where all comnunity funding functionality is available to the holder of any BAYC NFT. For example Bored Ape holder Jason will see on his Ape Harmony profile all the NFTs in his wallet which give him member privileges in the BAYC funding hub. 
 
-For example Bored Ape holder Jason goes to eg. p2c.bayc.apeharmony.com where he sees what NFTs he holds which give him member privileges in the BAYC funding hub. This defaults to any NFT in the BAYC collection, but is set by the NFT collection's deployer wallet or any wallets they choose to delegate that power to. For example, the BAYC funding hub can be configured to give member privileges to anyone with a BAYC, MAYC or Otherside Deed, or it can be restricted to only owners of BAYC NFTs etc.
+### MEMBER PRIVILEGES
 
-Any visitor to bayc.p2c.apeharmony.com will see a list of funding rounds ie. requests for funding associated with the BAYC collection. These rounds are organized like threads similar to Reddit, and are divided into two categories: COMPLETED and ACTIVE. Except for comments, the only type of posts allowed in funding hubs are rounds ie. requests for funding.
+Member priveleges default to include the holder of any NFT in the collection (for example any BAYC holder) but as this is set by the NFT collection's deployer wallet, the BAYC funding hub can also be configured to give member privileges to anyone with a BAYC, MAYC, Otherside Deed, or any other NFT as well. All member privilege configurations are user defined.
+
+### ROUNDS LIST
+
+Visitors to the funding hub of an NFT collection on Ape Harmony will see a list of funding rounds ie. requests for funding associated with that NFT collection eg. BAYC. All rounds appear as posts and are organized in a list like a Reddit thread. 
+
+Except for comments, the only type of posts allowed in funding hubs are rounds ie. requests for funding. Rounds are divided into two categories: COMPLETED and ACTIVE.
+
+Active rounds are further filtered as follows:
+
+1. Most funded ie. amount received as a percentage to total requested
+2. Ending soonest (all funding rounds have expirations ie. that can not remain open indefinitely)
+3. Most popular
+
+Completed rounds are filtered as follows:
+
+1. Funded & Not Funded (If a round fails to meet its target funding amount, the contributions to the round are refunded to the depositors upon expiration)
+2. Most funded
+3. Recent
+4. Most popular
 
 ### Comments
 
 If a visitor to the BAYC funding hub on Ape Harmony is not a Bored Ape holder, he will not be allowed to create new rounds, and therefore the only type of posts he can submit are comments on already created rounds. This includes both active and completed rounds, but as the purpose of these threads are to support and inquire about projects seeking funding, active rounds will have much higher activity than completed rounds.
 
-### MEMBER PRIVILEGES
 
 As a Bored Ape owner Jason will not only see the active and created rounds (posts) on the BAYC funding hub, he will also able to create a new round. As mentioned previously, funding rounds are requests for financing which are just posts in the BAYC funding hub. Every new round must include the amount the creator is seeking in either ETH or an ERC20 token specific to the funding hub's NFT collection like for example the ERC20 received in exchange for depositing your NFT on "Pooled NFTs".
 
