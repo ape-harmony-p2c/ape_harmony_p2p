@@ -1,5 +1,6 @@
 import { Button } from "@chakra-ui/react"
 import axios from "axios";
+import { MOST_UPVOTES, ENDING_SOON, COMPLETE } from '../constants/sortby'
 import { useSession } from "@randombits/use-siwe";
 //how to get user data 
 //const res = await axios.get('/api/user', {params: {userAddress: address }})
@@ -12,13 +13,17 @@ import { useSession } from "@randombits/use-siwe";
 
 //create comments 
 
+//create crowd sale 
+//const res = await axios.post('/api/crowdsale',{_title:  "testTitle", _body:"new text", _info:"looking for x", _endingAt: new Date(Date.now() + 86400000 * 2).toISOString() })
 
+//get crowed sale
+//const res = await axios.get('/api/crowdsale',{params: {_sortby: COMPLETE }})
 export default function Logan() {
   const { address } = useSession()
 
   const testAPICall = async () => {
     try {
-      const res = await axios.post('/api/comment',{_crowdSaleId:  "10", _body:"new comment" })
+      const res = await axios.get('/api/crowdsale',{params: {_sortby: COMPLETE }})
       console.log(res.data)
     } catch (error) {
       console.log(error)

@@ -12,14 +12,15 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 
         case 'POST':
             if (!authenticatedUser) return res.status(401).send("Unauthorized");
-            const { _title, _body, _info } = req.body
+            const { _title, _body, _info, _endingAt } = req.body
             try {
                 const crowdSale = await prisma.crowdSale.create({
                     data: {
                         title: _title,
                         body: _body,
                         info: _info,
-                        createdBy: { connect: { address: authenticatedUser } }
+                        endingAt: _endingAt,
+                        createdBy: { connect: { address: authenticatedUser.toLowerCase() } }
                     }
 
                 })
@@ -34,51 +35,44 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
         case 'GET':
             const { _sortBy, _skip, _take } = req.query;
             try {
-                const queryFilters = {
-                    skip: _skip?.toString(),
-                    take: _take?.toString(),
+                const queryFilters: Prisma.CrowdSaleFindManyArgs = {
+                    skip: _skip ? parseInt(_skip as string) : undefined,
+                    take: _take ? parseInt(_take as string) : undefined,
                     orderBy: {
-                        createdAt: 'desc',
+                      createdAt: 'desc',
                     },
-                }
-
-                switch (_sortBy) {
-                    case 'mostComments':
-                        queryFilters.orderBy = {
-                            comments: {
-                                count: 'desc',
-                            },
-                        };
-                        break;
+                  };
+                
+                  switch (_sortBy) {
                     case 'mostUpvotes':
-                        queryFilters.orderBy = {
-                            commentVotes: {
-                                count: 'desc',
-                            },
-                        };
-                        break;
+                      queryFilters.orderBy = {
+                        commentVotes: {
+                          _count: 'desc',
+                        },
+                      };
+                      break;
                     case 'endingSoon':
-                        queryFilters.where = {
-                            endingAt: {
-                                lt: new Date(),
-                            },
-                        };
-                        queryFilters.orderBy = {
-                            endingAt: 'asc',
-                        };
-                        break;
+                      queryFilters.where = {
+                        endingAt: {
+                          lt: new Date(),
+                        },
+                      };
+                      queryFilters.orderBy = {
+                        endingAt: 'asc',
+                      };
+                      break;
                     case 'complete':
-                        queryFilters.where = {
-                            endingAt: {
-                                lt: new Date(),
-                            },
-                        };
-                        break;
+                      queryFilters.where = {
+                        endingAt: {
+                          lt: new Date(),
+                        },
+                      };
+                      break;
                     default:
-                        break;
-                }
-
-                const crowdSales = await prisma.crowdSale.findMany(queryFilters);
+                      break;
+                  }
+                
+                  const crowdSales = await prisma.crowdSale.findMany(queryFilters);
 
                 res.send(crowdSales)
             } catch (error) {

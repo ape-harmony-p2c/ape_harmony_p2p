@@ -26,7 +26,7 @@ export const UserContextProvider = (props: any) => {
 
     // read wallet's balance of 721 to check holder status
     const { data: balance, isError, isLoading } = useContractRead({
-        address: '0xecb504d39723b0be0e3a9aa33d646642d1051ee1', // placeholder address - need deployed contract address
+        address: '0xC4B0FaB89fe569632BcB2E4824953ec8a1adC22d', // placeholder address - need deployed contract address
         abi: ERC20ABI,
         functionName: 'balanceOf',
     })
