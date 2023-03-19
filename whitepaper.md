@@ -1,6 +1,6 @@
 # APE HARMONY P2C
 
-GO FUND YOURSELF!
+_GO FUND YOURSELF!_
 
 *****************
 
