@@ -5,16 +5,18 @@ import {
   getDefaultWallets,
   RainbowKitProvider,
 } from '@rainbow-me/rainbowkit';
-import { configureChains, createClient, WagmiConfig } from 'wagmi';
+import { configureChains, createClient, WagmiConfig, useAccount } from 'wagmi';
 import { mainnet, goerli, polygon, optimism, arbitrum } from 'wagmi/chains';
 import { alchemyProvider } from 'wagmi/providers/alchemy';
 import { publicProvider } from 'wagmi/providers/public';
 import type { AppProps } from 'next/app'
 import { ChakraProvider } from '@chakra-ui/react'
 import { NavigationBar } from '@/components/elements';
+import { createContext } from 'react';
+import { UserContextProvider } from '@/contexts/userContext';
 
 
-const alchemyId = 'YMYVZZmF7YdOUtdXKVP-OoKjlxhWa7nJ';
+const alchemyId = process.env.ALCHEMY_KEY!;
 
 const { chains, provider } = configureChains(
   [mainnet, goerli, polygon, optimism, arbitrum],
@@ -35,13 +37,31 @@ const wagmiClient = createClient({
   provider
 })
 
+// export interface IUser {
+//   addreess: BigNumber;
+// }
+// export type UserContextType = {
+//   user: IUser[];
+// };
+
+// export type UserType = {
+//   address: any;
+// }
+
+// const UserContext = createContext<UserType | null>(null);
+
+
+
 export default function App({ Component, pageProps }: AppProps) {
+  const { address } = useAccount()
   return (
     <WagmiConfig client={wagmiClient}>
       <RainbowKitProvider chains={chains}>
         <ChakraProvider>
         <NavigationBar />
-          <Component {...pageProps} />
+          <UserContextProvider >
+            <Component {...pageProps} />
+          </UserContextProvider>
         </ChakraProvider>
       </RainbowKitProvider>
     </WagmiConfig>
