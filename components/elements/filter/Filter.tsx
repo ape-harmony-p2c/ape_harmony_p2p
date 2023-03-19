@@ -19,12 +19,14 @@ import {
     Tab
 } from '@chakra-ui/react'
 import { useRouter } from 'next/router';
+import { useState } from 'react';
 import NextLink from 'next/link';
 import '@rainbow-me/rainbowkit/styles.css';
 import { ProfileBar } from '../profileBar';
 
 export const Filter = () => {
     const router = useRouter()
+    const [projects, setProjects] = useState([])
 
     return (
             <Tabs variant='soft-rounded' colorScheme='whatsapp' size={['sm', 'md', 'lg']} >
