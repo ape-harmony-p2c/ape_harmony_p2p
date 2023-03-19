@@ -62,6 +62,10 @@ We predict this will be used mostly for smaller projects in the beginning but it
 
 **************
 
+### But I'm just a degen!
+
+________________
+
 ### EAZY PEAZY
 
 Using Ape Harmoeny P2C is simple. Every NFT collection can create its own funding hub on Ape Harmony P2C simply by connecting any wallet with an NFT from that collection to the Ape Harmony contract. Remember, only owners of that specific NFT have access to post requests for funding but all users have access to view the content on the funding hub as well as contribute funds to funding rounds. 
