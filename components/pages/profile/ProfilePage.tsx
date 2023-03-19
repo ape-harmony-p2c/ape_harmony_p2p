@@ -17,7 +17,7 @@ export const ProfilePage = () => {
     const [isUser, setIsUser] = useState(false)
 
     const prefillUser = {
-        imageUrl: '',
+        imgUrl: '',
         name: '',
         bio: '',
         twitter: '',

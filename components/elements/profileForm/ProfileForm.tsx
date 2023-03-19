@@ -70,7 +70,6 @@ export const ProfileForm = ({
             validateOnChange={false}
             validateOnBlur={false}
             enableReinitialize
-            isDisabled={!isUser}
             onSubmit={(values) => {
                 onSubmit({ ...values })
             }}
@@ -95,8 +94,7 @@ export const ProfileForm = ({
                                 <Image
                                     src={initialValues.imgUrl}
                                     alt="profile image"
-                                    layout="fill"
-                                    objectFit="cover"
+                                    fill
                                 />
                             ) : (
                                 <Icon
@@ -135,6 +133,7 @@ export const ProfileForm = ({
                                         }
                                     >
                                         <Input
+                                            isDisabled={!isUser}
                                             {...field}
                                             id="name"
                                             placeholder="First name"
@@ -183,6 +182,7 @@ export const ProfileForm = ({
                                         }
                                     >
                                         <Input
+                                            isDisabled={!isUser}
                                             {...field}
                                             id="bio"
                                             placeholder="bio"
@@ -231,6 +231,7 @@ export const ProfileForm = ({
                                         }
                                     >
                                         <Input
+                                            isDisabled={!isUser}
                                             {...field}
                                             id="twitter"
                                             placeholder="twitter"
@@ -279,6 +280,7 @@ export const ProfileForm = ({
                                         }
                                     >
                                         <Input
+                                            isDisabled={!isUser}
                                             {...field}
                                             id="primaryFunction"
                                             placeholder="primaryFunction"
