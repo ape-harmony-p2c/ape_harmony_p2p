@@ -37,7 +37,7 @@ import { mainnet, polygon, optimism, arbitrum } from 'wagmi/chains';
 import { alchemyProvider } from 'wagmi/providers/alchemy';
 import { publicProvider } from 'wagmi/providers/public';
 
-export const YourContributions = () => {
+export const RecentlyFunded = () => {
     const router = useRouter()
 
     return (

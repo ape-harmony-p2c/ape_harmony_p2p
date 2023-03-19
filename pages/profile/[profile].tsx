@@ -13,7 +13,7 @@ const ProfileContainer = () => {
 
 
     return (
-        <ProfilePage address={address?.toString()} />
+        <ProfilePage address={address} />
     )
 }
 

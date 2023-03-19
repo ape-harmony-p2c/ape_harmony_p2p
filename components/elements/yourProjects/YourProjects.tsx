@@ -40,7 +40,7 @@ import { mainnet, polygon, optimism, arbitrum } from 'wagmi/chains';
 import { alchemyProvider } from 'wagmi/providers/alchemy';
 import { publicProvider } from 'wagmi/providers/public';
 
-export const YourProjects = ({ address }: { address: string }) => {
+export const YourProjects = ({ address }: { address: string | undefined }) => {
     const router = useRouter()
     const [projects, setProjects] = useState([])
 

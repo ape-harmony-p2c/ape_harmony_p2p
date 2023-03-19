@@ -41,7 +41,7 @@ import { publicProvider } from 'wagmi/providers/public';
 import { v4 as uuidv4 } from 'uuid';
 
 
-export const YourContributions = ({ address }: { address: string }) => {
+export const YourContributions = ({ address }: { address: string | undefined }) => {
     const router = useRouter()
     const [projects, setProjects] = useState([])
 
