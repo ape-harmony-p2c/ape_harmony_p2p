@@ -34,7 +34,7 @@ For example Jason a BAYC holder wants to fund Amy another BAYC holder for a proj
 
 **********
 
-### NFT CROWDFUNDING
+### CROWDFUNDING for NFTs
 
 The crowdfunding market is more than 24 billion USD and is virtually non-existent in the NFT economy. Why is that? When an NFT collection mints it is in fact a kind of pre-sale but against some future more or less undefined utility. Crowdfunding is a form of pre-sale but with a well defined future utility, usually in the form of one or more of the products the creators are building. This model can certainly be applied within NFT communities as well.
 
@@ -44,7 +44,7 @@ What about the arts? Many Kickstarter projects are for making a movie or somethi
 
 ************
 
-### BOOST THE VALUE OF YOUR NFT's IP
+### NFT IP ON STEROIDS
 
 We understand that a primary objective for all NFT collections is the development of their IP. Whether this be in the form of cartoons, comic books, YouTube videos, toys and merchandise, branding of a new soft drink, or a petting zoo with real apes, utilizing the IP in new and creative ways is a major goal of every NFT collection.
 
