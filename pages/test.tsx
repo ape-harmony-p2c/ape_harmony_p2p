@@ -18,6 +18,9 @@ import { useSession } from "@randombits/use-siwe";
 
 //get crowed sale
 //const res = await axios.get('/api/crowdsale',{params: {_sortby: COMPLETE }})
+
+//get specific crowdsale
+
 export default function Logan() {
   const { address } = useSession()
 

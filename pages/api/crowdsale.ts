@@ -33,8 +33,17 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
             }
             break
         case 'GET':
-            const { _sortBy, _skip, _take } = req.query;
+            const { _sortBy, _skip, _take, _crowdSaleId } = req.query;
             try {
+                if (_crowdSaleId){
+                    const crowdSale = await prisma.crowdSale.findFirst({
+                        where:{
+                            id: parseInt(_crowdSaleId as string)
+                        }
+                    })
+                    res.send(crowdSale)
+                    return
+                }
                 const queryFilters: Prisma.CrowdSaleFindManyArgs = {
                     skip: _skip ? parseInt(_skip as string) : undefined,
                     take: _take ? parseInt(_take as string) : undefined,
@@ -75,6 +84,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
                   const crowdSales = await prisma.crowdSale.findMany(queryFilters);
 
                 res.send(crowdSales)
+                return
             } catch (error) {
                 console.log(error)
                 res.send({
