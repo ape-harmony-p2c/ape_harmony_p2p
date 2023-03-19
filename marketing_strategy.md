@@ -13,6 +13,8 @@ Utilizing social media marketing: interconnecting with NFT creators, marketplace
 BUSINESS MODEL
 Percentage of raised funds
 
+MARKET SIZE: Kickstarter is the top fundraising plactform outside Crypto: https://growjo.com/company/Kickstarter. The NFT market generated around $24.7 billion worth of organic trading volume in 2022 across blockchain platforms and marketplaces. If a modest 10% use our platform as a form of funding to generate community support and engagement, we have an estimated $2.47B in transaction volume and we monetize a percentage of it.
+
 KEY FEATURES
 All actions are shareable on social media. 
 The tool allows to search for projects with filters and produces lists: Funded projects, new proposals, etc.
