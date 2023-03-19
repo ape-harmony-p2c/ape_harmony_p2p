@@ -14,7 +14,7 @@ _GO FUND YOURSELF!_
 
 ______________
 
-APE HARMONY... _Time to start creating!_
+### APE HARMONY... _Time to start creating!_
 
 *************
 
@@ -62,11 +62,11 @@ We predict this will be used mostly for smaller projects in the beginning but it
 
 **************
 
-### But I'm just a degen!
+### I didn't have time to write a short letter so I wrote a long one
 
 ________________
 
-### EAZY PEAZY
+### HOW IT WORKS
 
 Using Ape Harmoeny P2C is simple. Every NFT collection can create its own funding hub on Ape Harmony P2C simply by connecting any wallet with an NFT from that collection to the Ape Harmony contract. Remember, only owners of that specific NFT have access to post requests for funding but all users have access to view the content on the funding hub as well as contribute funds to funding rounds. 
 
@@ -93,11 +93,7 @@ Completed rounds are filtered as follows:
 
 ___________
 
-### But how do it know?
-
-_____________
-
-### THAT SECRET SAUCE
+### BUT HOW DO IT KNOW
 
 Every round must include the amount the creator is seeking and the formula for distribution of value from the project being funded. This can be in either ETH, an ERC20 token specific to the funding hub's NFT collection like for example the ERC20 received in exchange for depositing your NFT on "Pooled NFTs", or some other form of value such as NFTs with some utility attached to it.
 
