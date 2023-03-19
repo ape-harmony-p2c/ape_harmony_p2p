@@ -37,10 +37,10 @@ export const AboutSection = () => {
     return (
         <>
         <Box>
-            <Heading size={['2xl', null, null, '3xl']} color='#A1F408' textAlign={'center'}>
+            <Heading  size={['2xl', null, null, '3xl']} color='#A1F408' textAlign={'center'}>
                 Come <Text display={'inline'} color='white'>build</Text> with us!
             </Heading>
-            <Text fontSize={['12px', null, null, '22px']} color='#979797' px='2rem' textAlign='center' py={10}>
+            <Text fontSize={['14px', '16px', null, '22px']} color='#979797' px='2rem' textAlign='center' py={10}>
                 Built by communities. Built for communities. Built to inspire communities.
             </Text>          
         </Box>  
