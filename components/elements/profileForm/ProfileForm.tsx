@@ -125,7 +125,7 @@ export const ProfileForm = ({
                             <Text
                                 fontSize="20px"
                                 fontWeight="500"
-                                color="gray.900"
+                                color="white"
                                 style={{
                                     fontVariant: 'all-small-caps',
                                 }}
@@ -144,9 +144,10 @@ export const ProfileForm = ({
                                         }
                                     >
                                         <Input
+                                            // backgroundColor={'white'}
                                             borderRadius={'9999px'}
                                             height={'42px'}
-                                            isDisabled={!isUser}
+                                            // isDisabled={!isUser}
                                             {...field}
                                             id="name"
                                             placeholder="Name"
@@ -175,7 +176,7 @@ export const ProfileForm = ({
                             <Text
                                 fontSize="20px"
                                 fontWeight="500"
-                                color="gray.900"
+                                color="white"
                                 style={{
                                     fontVariant: 'all-small-caps',
                                 }}
@@ -195,8 +196,8 @@ export const ProfileForm = ({
                                     >
                                         <Textarea
                                             height={'64px'}
-
-                                            isDisabled={!isUser}
+                                            // backgroundColor={'white'}
+                                            // isDisabled={!isUser}
                                             {...field}
                                             id="bio"
                                             placeholder="Tell us about you."
@@ -227,7 +228,7 @@ export const ProfileForm = ({
                             <Text
                                 fontSize="20px"
                                 fontWeight="500"
-                                color="gray.900"
+                                color="white"
                                 style={{
                                     fontVariant: 'all-small-caps',
                                 }}
@@ -246,9 +247,10 @@ export const ProfileForm = ({
                                         }
                                     >
                                         <Input
+                                            // backgroundColor={'white'}
                                             borderRadius={'9999px'}
                                             height={'42px'}
-                                            isDisabled={!isUser}
+                                            // isDisabled={!isUser}
                                             {...field}
                                             id="twitter"
                                             placeholder="Your twitter handle"
@@ -277,7 +279,7 @@ export const ProfileForm = ({
                             <Text
                                 fontSize="20px"
                                 fontWeight="500"
-                                color="gray.900"
+                                color="white"
                                 style={{
                                     fontVariant: 'all-small-caps',
                                 }}
@@ -296,9 +298,10 @@ export const ProfileForm = ({
                                         }
                                     >
                                         <Input
+                                            // backgroundColor={'white'}
                                             borderRadius={'9999px'}
                                             height={'42px'}
-                                            isDisabled={!isUser}
+                                            // isDisabled={!isUser}
                                             {...field}
                                             id="primaryFunction"
                                             placeholder="Are you a funder or looking for funding?"

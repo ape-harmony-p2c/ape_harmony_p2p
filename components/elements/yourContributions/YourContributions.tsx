@@ -88,7 +88,7 @@ export const YourContributions = ({ address }: { address: string | string[] | un
 
     return (
         <>
-            <Accordion allowToggle w={['98%', null, null, '90%']}>
+            <Accordion allowToggle w={['100%']} mb='40px' >
                 <AccordionItem color='white' borderTop={'1px solid #4E5D73'} borderBottom={'none'} borderColor='#4E5D73' rounded={'.25rem'}>
                     <h2>
                         <AccordionButton bgColor='#212C3B' rounded='.25rem'>
