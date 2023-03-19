@@ -58,7 +58,7 @@ We understand that a primary objective for all NFT collections is the developmen
 
 Holders of NFTs can now use Ape Harmony P2C to create requests for funding from other holders of their NFT. This is peer to community funding. The use cases are wide but this will usually be to create something which develops the IP of the NFT in question. Otherwise why would the community want to fund it?
 
-We predict this will be used mostly for smaller projects in the beginning but it certainly would work for humungous ones as well. Sure Warner Bros or Dreamworks might make a deal to license the Bored Apes and make a movie out of it like they do with everything else good or bad. Remember the movie Battleship based on the old tabletop game? How about the Angry Birds animated film? Do we really want those guys handling our IP to make a movie from our beloved NFT collections? Nahhhh. Let's have folks from the community make it!
+We predict this will be used mostly for smaller projects in the beginning but it certainly would work for humungous ones as well. Sure Warner Bros or Dreamworks might make a deal to license the Bored Apes and make a movie out of it like they do with everything else good or bad. Remember the movie Battleship based on the old tabletop game? How about the Angry Birds animated film? Do we really want those guys handling our IP to make a movie from our beloved NFT collections? Nahhhh.
 
 **************
 
