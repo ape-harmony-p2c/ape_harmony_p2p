@@ -32,7 +32,7 @@ export interface ProfileFormValues {
 }
 
 interface ProfileFormProps {
-    isFetching: boolean
+    // isFetching: boolean
     isUser: boolean
     prefillUser?: ProfileFormValues
     onSubmit: (values: ProfileFormValues) => void
@@ -49,7 +49,7 @@ const validationSchema = yup.object().shape({
 
 
 export const ProfileForm = ({
-    isFetching,
+    // isFetching,
     isUser,
     prefillUser,
     onSubmit,

@@ -27,6 +27,7 @@ import { UserContextProvider } from '@/contexts/userContext';
 
 
 const alchemyId = process.env.ALCHEMY_KEY!;
+console.log(alchemyId)
 
 const { chains, provider } = configureChains(
   [mainnet, goerli, polygon, optimism, arbitrum],

@@ -2,6 +2,7 @@ import { useState } from 'react'
 import NextLink from 'next/link'
 import { ProfileForm } from '@/components/elements/profileForm'
 import * as routes from '../../../constants/routes'
+import axios from 'axios';
 
 import {
     Flex,
@@ -10,9 +11,11 @@ import {
 
 } from '@chakra-ui/react'
 
+interface ProfileFormProps {
+    address: string
+}
 
-
-export const ProfilePage = () => {
+export const ProfilePage = ({ address }: ProfileFormProps) => {
     // Status state
     const [isFetching, setIsFetching] = useState(false)
     const [isUser, setIsUser] = useState(false)
@@ -26,6 +29,23 @@ export const ProfilePage = () => {
     }
     const onSubmit = () => {
 
+        useEffect(() => {
+            async function fetchData() {
+                try {
+                    const res = await axios.get('./api/crowdsale', {
+                        params: {
+                            _sortBy: 'mostUpvotes',
+                        },
+                    });
+                    const { data } = res
+                    console.log(data)
+                    setProjects(data)
+                } catch (error) {
+                    console.log(error)
+                }
+            }
+            fetchData();
+        }, []);
     }
 
     return (

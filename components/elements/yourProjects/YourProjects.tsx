@@ -39,7 +39,7 @@ import { mainnet, polygon, optimism, arbitrum } from 'wagmi/chains';
 import { alchemyProvider } from 'wagmi/providers/alchemy';
 import { publicProvider } from 'wagmi/providers/public';
 
-export const YourContributions = () => {
+export const YourProjects = () => {
     const router = useRouter()
     const [projects, setProjects] = useState([])
 
@@ -58,6 +58,24 @@ export const YourContributions = () => {
             console.log(error)
         }
     }
+
+    useEffect(() => {
+        async function fetchData() {
+            try {
+                const res = await axios.get('./api/crowdsale', {
+                    params: {
+                        _sortBy: 'mostUpvotes',
+                    },
+                });
+                const { data } = res
+                console.log(data)
+                setProjects(data)
+            } catch (error) {
+                console.log(error)
+            }
+        }
+        fetchData();
+    }, []);
 
     useEffect(() => {
         async function fetchData() {
