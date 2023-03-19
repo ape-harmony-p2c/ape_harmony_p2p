@@ -12,6 +12,6 @@ const LookingForContainer = () => {
     )
 }
 
-LookingForContainer.displayName = 'LookingFor Container'
+LookingForContainer.displayName = 'Looking For Page Container'
 
 export default memo(LookingForContainer)
