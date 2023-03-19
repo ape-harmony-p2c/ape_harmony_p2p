@@ -37,7 +37,7 @@ import { mainnet, polygon, optimism, arbitrum } from 'wagmi/chains';
 import { alchemyProvider } from 'wagmi/providers/alchemy';
 import { publicProvider } from 'wagmi/providers/public';
 
-export const YourContributions = () => {
+export const YourProjects = () => {
     const router = useRouter()
 
     return (
@@ -47,7 +47,7 @@ export const YourContributions = () => {
                     <h2>
                         <AccordionButton bgColor='#212C3B' rounded='.25rem'>
                             <Box as="span" flex='1' textAlign='left' fontSize={21} fontWeight='semibold'>
-                                Your Contributions
+                                Your Projects
                             </Box>
                             <AccordionIcon />
                         </AccordionButton>

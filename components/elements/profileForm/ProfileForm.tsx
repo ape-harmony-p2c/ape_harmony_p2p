@@ -11,6 +11,7 @@ import {
     FormErrorMessage,
     Icon,
     Circle,
+    Textarea,
 } from '@chakra-ui/react'
 import Image from 'next/image'
 import { MdPerson } from 'react-icons/md'
@@ -78,17 +79,24 @@ export const ProfileForm = ({
                 <Form
                     style={{
                         display: 'flex',
-                        flex: 1,
+                        width: "100%",
+                        // height: '100%'
                     }}
                 >
                     <Flex
                         flexDir={'column'}
+                        border='2px'
+                        width={'100%'}
+                        // maxWidth={'80rem'}
+                        borderRadius={'.75rem'}
+                        padding={['4px', null, '8px', null, '20px']}
                     >
                         <Circle
                             position="relative"
                             size={['160px', null, '200px']}
-                            backgroundColor="white"
+                            backgroundColor="grey.100"
                             overflow="hidden"
+                            mb='40px'
                         >
                             {initialValues.imgUrl ? (
                                 <Image
@@ -106,10 +114,9 @@ export const ProfileForm = ({
                             )}
                         </Circle>
                         <Flex
-                            flex={1}
+                            mb='40px'
                             flexDirection="column"
-                            marginRight={[0, null, 4]}
-                            marginBottom={[8, null, 0]}
+                        // 
                         >
                             <Text
                                 fontSize="20px"
@@ -133,10 +140,12 @@ export const ProfileForm = ({
                                         }
                                     >
                                         <Input
+                                            borderRadius={'9999px'}
+                                            height={'42px'}
                                             isDisabled={!isUser}
                                             {...field}
                                             id="name"
-                                            placeholder="First name"
+                                            placeholder="Name"
                                             variant="filled"
                                             paddingTop={6}
                                             paddingBottom={6}
@@ -144,21 +153,20 @@ export const ProfileForm = ({
                                                 border: '1px solid #D3E3F8',
                                             }}
                                         />
-                                        <FormErrorMessage
+                                        {/* <FormErrorMessage
                                             fontSize="xs"
                                             position="absolute"
                                         >
                                             {form.errors.name}
-                                        </FormErrorMessage>
+                                        </FormErrorMessage> */}
                                     </FormControl>
                                 )}
                             </Field>
                         </Flex>
                         <Flex
-                            flex={1}
+                            mb='40px'
                             flexDirection="column"
-                            marginRight={[0, null, 4]}
-                            marginBottom={[8, null, 0]}
+
                         >
                             <Text
                                 fontSize="20px"
@@ -181,33 +189,36 @@ export const ProfileForm = ({
                                             )
                                         }
                                     >
-                                        <Input
+                                        <Textarea
+                                            height={'64px'}
+
                                             isDisabled={!isUser}
                                             {...field}
                                             id="bio"
-                                            placeholder="bio"
+                                            placeholder="Tell us about you."
                                             variant="filled"
-                                            paddingTop={6}
-                                            paddingBottom={6}
+                                            padding={'8px 16px'}
+                                            fontSize={'100%'}
+                                            borderRadius={'1.5rem'}
+                                            w={'100%'}
                                             style={{
                                                 border: '1px solid #D3E3F8',
                                             }}
                                         />
-                                        <FormErrorMessage
+                                        {/* <FormErrorMessage
                                             fontSize="xs"
                                             position="absolute"
                                         >
                                             {form.errors.bio}
-                                        </FormErrorMessage>
+                                        </FormErrorMessage> */}
                                     </FormControl>
                                 )}
                             </Field>
                         </Flex>
                         <Flex
-                            flex={1}
+                            mb='40px'
                             flexDirection="column"
-                            marginRight={[0, null, 4]}
-                            marginBottom={[8, null, 0]}
+
                         >
                             <Text
                                 fontSize="20px"
@@ -231,10 +242,12 @@ export const ProfileForm = ({
                                         }
                                     >
                                         <Input
+                                            borderRadius={'9999px'}
+                                            height={'42px'}
                                             isDisabled={!isUser}
                                             {...field}
                                             id="twitter"
-                                            placeholder="twitter"
+                                            placeholder="Your twitter handle"
                                             variant="filled"
                                             paddingTop={6}
                                             paddingBottom={6}
@@ -242,21 +255,20 @@ export const ProfileForm = ({
                                                 border: '1px solid #D3E3F8',
                                             }}
                                         />
-                                        <FormErrorMessage
+                                        {/* <FormErrorMessage
                                             fontSize="xs"
                                             position="absolute"
                                         >
                                             {form.errors.twitter}
-                                        </FormErrorMessage>
+                                        </FormErrorMessage> */}
                                     </FormControl>
                                 )}
                             </Field>
                         </Flex>
                         <Flex
-                            flex={1}
+                            mb='40px'
                             flexDirection="column"
-                            marginRight={[0, null, 4]}
-                            marginBottom={[8, null, 0]}
+
                         >
                             <Text
                                 fontSize="20px"
@@ -280,10 +292,12 @@ export const ProfileForm = ({
                                         }
                                     >
                                         <Input
+                                            borderRadius={'9999px'}
+                                            height={'42px'}
                                             isDisabled={!isUser}
                                             {...field}
                                             id="primaryFunction"
-                                            placeholder="primaryFunction"
+                                            placeholder="Are you a funder or looking for funding?"
                                             variant="filled"
                                             paddingTop={6}
                                             paddingBottom={6}
@@ -291,35 +305,36 @@ export const ProfileForm = ({
                                                 border: '1px solid #D3E3F8',
                                             }}
                                         />
-                                        <FormErrorMessage
+                                        {/* <FormErrorMessage
                                             fontSize="xs"
                                             position="absolute"
                                         >
                                             {form.errors.primaryFunction}
-                                        </FormErrorMessage>
+                                        </FormErrorMessage> */}
                                     </FormControl>
                                 )}
                             </Field>
                         </Flex>
+                        {/* <Button
+                            display={isUser ? 'block' : 'block'}
+                            type="submit"
+                            fontSize={['16px', null, null, '24px']}
+                            height='42px'
+                            isLoading={isFetching}
+                            colorScheme={'teal'}
+                            mb={'20px'}
+                            borderRadius={'9999px'}
+                            onClick={() => {
+                                window.scrollTo({ top: 0, behavior: 'smooth' })
+                            }}
+                        >
+                            Submit
+                        </Button> */}
                     </Flex>
-                    <Button
-                        display={isUser ? 'block' : 'none'}
-                        type="submit"
-                        fontSize={['16px', null, null, '24px']}
-                        paddingLeft={16}
-                        paddingRight={16}
-                        paddingTop={[6, null, null, 8]}
-                        paddingBottom={[6, null, null, 8]}
-                        marginTop={12}
-                        isLoading={isFetching}
-                        onClick={() => {
-                            window.scrollTo({ top: 0, behavior: 'smooth' })
-                        }}
-                    >
-                        Submit
-                    </Button>
+
                 </Form>
-            )}
-        </Formik>
+            )
+            }
+        </Formik >
     )
 }

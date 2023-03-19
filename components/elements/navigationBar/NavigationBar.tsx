@@ -12,12 +12,17 @@ import NextLink from 'next/link';
 import * as routes from '../../../constants/routes';
 import '@rainbow-me/rainbowkit/styles.css';
 import { ConnectButton } from '@rainbow-me/rainbowkit';
-
+import { useSession } from '@randombits/use-siwe';
 
 
 export const NavigationBar = () => {
     const router = useRouter()
     const [location, setLocation] = useState('home')
+    const [address, setAddress] = useState('')
+    const sessionsInfo = useSession()
+    if (sessionsInfo.address) {
+        setAddress(sessionsInfo.address)
+    }
 
     return (
         <Flex
@@ -63,12 +68,14 @@ export const NavigationBar = () => {
                 </Link>
             </Flex >
             <Flex h={['32px', null, '48px']} position={'absolute'} top={['20px', null, '20px']} right={['4px', null, '20px']}>
+                {/* <Link as={NextLink} href={address ? routes.PROFILE}> */}
                 <ConnectButton
                     accountStatus={{
                         smallScreen: 'avatar',
                         largeScreen: 'full',
                     }}
                 />
+                {/* </Link> */}
             </Flex>
         </Flex >
     )

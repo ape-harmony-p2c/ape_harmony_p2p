@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import NextLink from 'next/link'
 import { ProfileForm } from '@/components/elements/profileForm'
+import * as routes from '../../../constants/routes'
 
 import {
     Flex,
@@ -29,8 +30,21 @@ export const ProfilePage = () => {
 
     return (
         <Flex justify="center" mt={'68px'}>
-            <Flex align="center" direction="column" height="100vh" width="60vw">
-                <Button>Get Funded</Button>
+            <Flex direction="column" height="100vh" width="60vw">
+                <Flex
+                    w={'100%'}
+                    justifyContent={'right'}
+                    mt='20px'
+                    padding="20px"
+                >
+                    <NextLink href={routes.CREATE_PROPOSAL}>
+                        <Button
+                            h="42px"
+                        >
+                            Get Funded
+                        </Button>
+                    </NextLink>
+                </Flex>
                 <ProfileForm
                     isFetching={isFetching}
                     isUser={isUser}
@@ -40,7 +54,7 @@ export const ProfilePage = () => {
                 <Flex></Flex>
                 <Flex></Flex>
             </Flex>
-        </Flex>
+        </Flex >
 
     )
 }
