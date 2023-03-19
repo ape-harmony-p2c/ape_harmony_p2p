@@ -44,9 +44,10 @@ const wagmiClient = createClient({
   connectors,
   provider
 })
-const { signin} = useSignin()
+
 
 export default function App({ Component, pageProps }: AppProps) {
+  const { signin} = useSignin()
   return (
     <WagmiConfig client={wagmiClient}>
       <SiweProvider>

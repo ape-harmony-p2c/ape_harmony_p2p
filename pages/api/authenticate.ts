@@ -20,6 +20,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
                     address: authenticatedUser.toLocaleLowerCase()
                 }
             });
+            console.log("user authenticated", user)
             break
         default:
             res.setHeader('Allow', ['GET'])
