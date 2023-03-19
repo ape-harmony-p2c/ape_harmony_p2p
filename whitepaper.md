@@ -1,5 +1,7 @@
 ## APE HARMONY P2C (PEER-TO-COMMUNITY) FUNDING
 
+*****************
+
 GO FUND YOURSELF!
 
 **Why?**... _Your NFT community understands you._
