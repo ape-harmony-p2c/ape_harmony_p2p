@@ -18,7 +18,7 @@ Brands and celebrities can use our tool to engage with fans by creating their ow
 MONETISATION/BUSINESS MODEL
 Percentage of raised funds
 
-MARKETING STRATEGIES OUTLINE: 
+MARKETING STRATEGIES: 
 PR and press campaign communicated directly to blogs in the space
 Partnering with NFT marketplaces, as well as artist and brands, inviting them to use our tool 
 Utilizing social media marketing: interconnecting with NFT creators, marketplaces, etc on social media. The tool allows for every action in the funding process to be shared across all social media platforms, creating fan engagement
@@ -31,4 +31,7 @@ Gamification instruments: the most popular projects, those who fund the most pro
 TECH: 
 PooledNFT, Etherium, React, Solarium, 
 
+COMPETITION: 
+Most solutions like Jumpstart, leverege NFTs to raise funds for tangible products. 
+funded.app, 
 .
