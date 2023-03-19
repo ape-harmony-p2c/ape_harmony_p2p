@@ -48,6 +48,10 @@ What about the arts? Many Kickstarter projects are for making a movie or somethi
 
 ************
 
+## Wen Bored Ape Pixar movie?
+
+______________
+
 ### NFT IP on STEROIDS
 
 We understand that a primary objective for all NFT collections is the development of their IP. Whether this be in the form of cartoons, comic books, YouTube videos, toys and merchandise, branding of a new soft drink, or a petting zoo with real apes, utilizing the IP in new and creative ways is a major goal of every NFT collection.
