@@ -21,6 +21,7 @@ import axios from 'axios';
 import useSignin from '@/hooks/useSignin';
 import useMemo from 'react'
 import { SiweMessage } from 'siwe';
+import theme from '@/theme';
 
 //const sign = axios.post('api/authenticate');
 import { UserContextProvider } from '@/contexts/userContext';

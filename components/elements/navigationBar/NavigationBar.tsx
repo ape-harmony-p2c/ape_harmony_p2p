@@ -4,20 +4,26 @@ import {
     Link,
     Button,
     Show,
-    Hide
+    Hide,
+    useColorMode,
+    Switch,
+    IconButton
 } from '@chakra-ui/react'
-// import { GiHamburgerMenu } from 'react-icons/gi'
 import { useRouter } from 'next/router';
 import NextLink from 'next/link';
 import * as routes from '../../../constants/routes';
 import '@rainbow-me/rainbowkit/styles.css';
 import { ConnectButton } from '@rainbow-me/rainbowkit';
-
+import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 
 
 export const NavigationBar = () => {
     const router = useRouter()
     const [location, setLocation] = useState('home')
+    const [isHovered, setIsHovered] = useState(false);
+
+    const { colorMode, toggleColorMode } = useColorMode()
+
 
     return (
         <Flex
@@ -69,13 +75,13 @@ export const NavigationBar = () => {
                         rounded='.75rem'
                         color='teal'
                         variant={'ghost'}
-                        aria-label='fund stuff'
+                        aria-label='Discover'
                         p='.75rem'
                         borderColor={location === 'fundings' ? 'teal' : 'none'}
                         border={location === 'fundings' ? '2px' : 'none'}
                         bgColor={location === 'fundings' ? 'gray.100' : 'none'}
                     >
-                        Fund Stuff
+                        Discover
                     </Button>
                 </Link>
             </Flex >
@@ -86,6 +92,17 @@ export const NavigationBar = () => {
                         largeScreen: 'full',
                     }}
                 />
+                <IconButton
+                    ml={4}
+                    onClick={toggleColorMode}
+                    icon={colorMode === "light" ? <MoonIcon /> : <SunIcon />}
+                    aria-label="Toggle light/dark mode"
+                    borderRadius="full"
+                      bg={isHovered ? "gray.300" : "gray.200"}
+                    _hover={{ bg: "gray.300" }}
+                      onMouseEnter={() => setIsHovered(true)}
+                      onMouseLeave={() => setIsHovered(false)}
+                    />
             </Flex>
             {/* </Flex> */}
             {/* </Flex> */}
