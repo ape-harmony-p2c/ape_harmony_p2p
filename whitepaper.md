@@ -16,7 +16,7 @@ _or whatever_
 
 The biggest problem facing creators is the difficulty in raising sufficient financing in order to produce content or products on a professional level. For example in Hollywood, the typical pipeline from development to distribution of films can take several years, and this is magnified when the creators are newcomers operating on a grassroots level. The hunt for financing can be long and difficult, and connecting your investors and bankers to the distributor or studio in order to close the deal, requires engaging attorneys and others with similar experience.
 
-Web3 changes the rules of all that. Ape Harmony understands that one of the main objectives for NFT collections is the development of their IP. Whether this be in the form of cartoons, comic books, YouTube videos, toys and merchandise, branding of a new soft drink, or anything else, utilizing the IP in new and creative ways is a major goal of every NFT collection.
+Ape Harmony changes the rules of this shitty game. We understand that a primary objective for all NFT collections is the development of their IP. Whether this be in the form of cartoons, comic books, YouTube videos, toys and merchandise, branding of a new soft drink, or a petting zoo with real apes, utilizing the IP in new and creative ways is a major goal of every NFT collection.
 
 At Ape Harmony holders of NFTs in a collection can post requests for funding from other holders of the same NFT. The use cases are wide but this will usually be to create something which develops the IP of the NFT in question. Otherwise why would the community want to fund it? But where does this funding from?
 
