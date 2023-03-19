@@ -20,6 +20,7 @@ export const UserContextProvider = (props: any) => {
     // set some state
     const [isHolder, setIsHolder] = useState(false);
     const [USDC, setUSDC] = useState<BigNumber | number>(0)
+    const [accountAddress, setAccountAddress] = useState('')
 
     //use effect hooks to grab stuff from wagmi
 
@@ -39,6 +40,12 @@ export const UserContextProvider = (props: any) => {
     // 
 
     useEffect(() => {
+        if (address) {
+            setAccountAddress(address)
+        }
+      }, [address, setAccountAddress]);
+
+    useEffect(() => {
         if (balance! > 0) {
             setIsHolder(true)
         }
@@ -53,7 +60,7 @@ export const UserContextProvider = (props: any) => {
     return (
         <UserContext.Provider
           value={{
-            address,
+            address: accountAddress,
             tokenHolder: isHolder,
             USDCBalance: USDC
 
