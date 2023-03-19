@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import {
     Flex,
     Link,
@@ -11,12 +11,23 @@ import NextLink from 'next/link';
 import * as routes from '../../../constants/routes';
 import '@rainbow-me/rainbowkit/styles.css';
 import { ConnectButton } from '@rainbow-me/rainbowkit';
+import { UserContext } from '@/contexts/userContext';
+import { useAccount } from 'wagmi';
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 
 
 export const NavigationBar = () => {
     const router = useRouter()
     const [location, setLocation] = useState('home')
+    // const [address, setAddress] = useState('')
+    const { address } = useAccount()
+
+
+    // setAddress(user.address)
+    // const sessionsInfo = useSession()
+    // if (sessionsInfo.address) {
+    //     setAddress(sessionsInfo.address)
+    // }
     const [isHovered, setIsHovered] = useState(false);
 
     const { colorMode, toggleColorMode } = useColorMode()
@@ -63,8 +74,27 @@ export const NavigationBar = () => {
                         Discover
                     </Button>
                 </Link>
+                {address &&
+                    <Link as={NextLink} href={`/profile/${address}`}>
+                        <Button
+                            size={['sm', null, 'lg']}
+                            onClick={() => { setLocation('fundings') }}
+                            rounded='.75rem'
+                            color='teal'
+                            variant={'ghost'}
+                            aria-label='fund stuff'
+                            p='.75rem'
+                            borderColor={location === 'fundings' ? 'teal' : 'none'}
+                            border={location === 'fundings' ? '2px' : 'none'}
+                            bgColor={location === 'fundings' ? 'gray.100' : 'none'}
+                        >
+                            Profile
+                        </Button>
+                    </Link>
+                }
             </Flex >
-            <Flex h={['32px', null, '48px']} position={'absolute'} top={['20px', null, '20px']} right={['4px', null, '20px']} justify='center'>
+            <Flex h={['32px', null, '48px']} position={'absolute'} top={['20px', null, '20px']} right={['4px', null, '20px']}>
+
                 <ConnectButton
                     accountStatus={{
                         smallScreen: 'avatar',
@@ -78,9 +108,9 @@ export const NavigationBar = () => {
                     aria-label="Toggle light/dark mode"
                     borderRadius="full"
                     _hover={{ bg: "gray.300" }}
-                      onMouseEnter={() => setIsHovered(true)}
-                      onMouseLeave={() => setIsHovered(false)}
-                    />
+                    onMouseEnter={() => setIsHovered(true)}
+                    onMouseLeave={() => setIsHovered(false)}
+                />
             </Flex>
         </Flex >
     )

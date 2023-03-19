@@ -9,7 +9,7 @@ import { UserContext } from '@/contexts/userContext'
 const inter = Inter({ subsets: ['latin'] })
 
 const HomeContainer = () => {
-  const user = useContext(UserContext)
+  // const user = useContext(UserContext)
   return (
     <HomePage />
   )

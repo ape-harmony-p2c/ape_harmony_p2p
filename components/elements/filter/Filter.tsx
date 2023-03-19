@@ -68,7 +68,7 @@ export const Filter = () => {
             }
         }
         fetchData();
-      }, []);
+    }, []);
 
     return (
         <>
@@ -80,7 +80,7 @@ export const Filter = () => {
                     <Tab onClick={() => handleClick('complete')} color={'white'}>Complete</Tab>
                 </TabList>
                 <Flex justify={'flex-start'} py={2} px={[2, 3, null, 6]}>
-            </Flex>
+                </Flex>
                 <TabPanels py={0}>
                     {
                         projects && projects.length && projects.map((project) => (
@@ -88,13 +88,13 @@ export const Filter = () => {
                         ))
                     }
                     <TabPanel>
-                    <p>Latest</p>
+                        <p>Latest</p>
                     </TabPanel>
                     <TabPanel>
-                    <p>Ending Soon</p>
+                        <p>Ending Soon</p>
                     </TabPanel>
                     <TabPanel>
-                    <p>Ended</p>
+                        <p>Ended</p>
                     </TabPanel>
                 </TabPanels>
             </Tabs>

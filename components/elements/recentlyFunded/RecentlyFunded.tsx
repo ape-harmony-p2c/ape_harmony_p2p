@@ -41,22 +41,22 @@ export const RecentlyFunded = () => {
     const router = useRouter()
 
     return (
-        <>        
-        <Accordion allowToggle w={['98%', null, null, '90%']}>
-            <AccordionItem color='white' borderTop={'1px solid #4E5D73'} borderBottom={'none'} borderColor='#4E5D73' rounded={'.25rem'}>
-                <h2>
-                <AccordionButton bgColor='#212C3B' rounded='.25rem'>
-                    <Box as="span" flex='1' textAlign='left' fontSize={21} fontWeight='semibold'>
-                    Recently Funded
-                    </Box>
-                    <AccordionIcon />
-                </AccordionButton>
-                </h2>
-                <AccordionPanel pb={4}>
-                <ProfileBar bgColor={'initial'} headingColor={'white'} customPadding={[0]} radius={0} title={'Bored Ape Water'} seeking={6300}/>
-                </AccordionPanel>
-            </AccordionItem>
-        </Accordion>
+        <>
+            <Accordion allowToggle w={['98%', null, null, '90%']}>
+                <AccordionItem color='white' borderTop={'1px solid #4E5D73'} borderBottom={'none'} borderColor='#4E5D73' rounded={'.25rem'}>
+                    <h2>
+                        <AccordionButton bgColor='#212C3B' rounded='.25rem'>
+                            <Box as="span" flex='1' textAlign='left' fontSize={21} fontWeight='semibold'>
+                                Recently Funded
+                            </Box>
+                            <AccordionIcon />
+                        </AccordionButton>
+                    </h2>
+                    <AccordionPanel pb={4}>
+                        <ProfileBar bgColor={'initial'} headingColor={'white'} customPadding={[0]} radius={0} title={'Bored Ape Water'} seeking={6300} />
+                    </AccordionPanel>
+                </AccordionItem>
+            </Accordion>
         </>
     )
 
