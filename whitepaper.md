@@ -34,7 +34,7 @@ For example Jason a BAYC holder wants to fund Amy another BAYC holder for a proj
 
 **********
 
-###Ape Harmony P2C is _the first Peer to **Community** funding ecosystem_
+### Ape Harmony P2C is _the first Peer to **Community** funding ecosystem_
 
 ______________
 
