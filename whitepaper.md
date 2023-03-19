@@ -4,6 +4,8 @@
 
 GO FUND YOURSELF!
 
+*****************
+
 **Why?**... _Your NFT community understands you._
 
 **How come?**... _You have the same goals._ 
