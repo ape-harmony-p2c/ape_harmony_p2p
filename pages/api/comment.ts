@@ -11,9 +11,9 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     case 'GET':
         //return all comments for a crowedsale
         try{
-            const {_crowdSaleId, _skip, _take } = req.body;
+            const {_crowdSaleId, _skip, _take } = req.query;
             const comments = await prisma.comment.findMany({
-                where: { crowdSaleId: _crowdSaleId },
+                where: { crowdSaleId: parseInt(_crowdSaleId as string) },
                 include: {
                   createdBy: true,
                   commentVotes: true,
@@ -30,8 +30,8 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
                     },
                   },
                 },
-                skip: _skip,
-                take: _take,
+                skip: parseInt(_skip as string),
+                take: parseInt(_take as string),
               });
         res.send(comments);
     }catch (error){
@@ -50,11 +50,12 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
                     data: {
                       body: _body,
                       createdBy: { connect: { address: authenticatedUser } },
-                      crowdSale: { connect: { id: _crowdSaleId } },
-                      parentComment: _parentCommentId ? { connect: { id: _parentCommentId } } : undefined
+                      crowdSale: { connect: { id: parseInt(_crowdSaleId as string) } },
+                      parentComment: _parentCommentId ? { connect: { id: parseInt(_parentCommentId as string) } } : undefined
                     },
                   });
                 res.send(comment)
+                return
         }catch (error) {
             console.log(error)
             res.send({

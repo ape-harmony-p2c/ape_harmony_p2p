@@ -29,6 +29,7 @@ model CrowdSale {
   title     String
   body      String
   info      String
+  endingAt DateTime
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
