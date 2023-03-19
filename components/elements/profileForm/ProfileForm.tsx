@@ -95,14 +95,14 @@ export const ProfileForm = ({
                         borderRadius={'.75rem'}
                         padding={['4px', null, '8px', null, '20px']}
                     >
-                        <Circle
+                        {/* <Circle
                             position="relative"
                             size={['160px', null, '200px']}
                             overflow="hidden"
                             mb='40px'
                         >
                             {typeof address === 'string' && <Jazzicon diameter={200} seed={jsNumberForAddress(address)} />}
-                            {/* {initialValues.imgUrl ? (
+                            {initialValues.imgUrl ? (
                                 <Image
                                     src={initialValues.imgUrl}
                                     alt="profile image"
@@ -115,8 +115,8 @@ export const ProfileForm = ({
                                     width="64px"
                                     color="blackAlpha.300"
                                 />
-                            )} */}
-                        </Circle>
+                            )}
+                        </Circle> */}
                         <Flex
                             mb='40px'
                             flexDirection="column"
@@ -322,12 +322,12 @@ export const ProfileForm = ({
                                 )}
                             </Field>
                         </Flex>
-                        {/* <Button
+                        <Button
                             display={isUser ? 'block' : 'block'}
                             type="submit"
                             fontSize={['16px', null, null, '24px']}
                             height='42px'
-                            isLoading={isFetching}
+                            // isLoading={isFetching}
                             colorScheme={'teal'}
                             mb={'20px'}
                             borderRadius={'9999px'}
@@ -336,7 +336,7 @@ export const ProfileForm = ({
                             }}
                         >
                             Submit
-                        </Button> */}
+                        </Button>
                     </Flex>
 
                 </Form>
