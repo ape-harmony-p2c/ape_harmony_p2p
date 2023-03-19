@@ -12,6 +12,8 @@ GO FUND YOURSELF!
 
 ### _...Why wouldn't they believe in your vision for a Bored Ape petting zoo with real apes?_
 
+______________
+
 APE HARMONY... _It's time to start creating!_
 
 *************
