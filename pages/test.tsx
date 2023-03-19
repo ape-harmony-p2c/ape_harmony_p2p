@@ -26,7 +26,7 @@ export default function Logan() {
 
   const testAPICall = async () => {
     try {
-      const res = await axios.get('/api/crowdsale',{params: {_sortby: COMPLETE }})
+      const res = await axios.get('/api/crowdsale',{params: {_userAddress:"0x76ddc134dafe883eb30b373d3ffb3ec6d8ddecd2" }})
       console.log(res.data)
     } catch (error) {
       console.log(error)
