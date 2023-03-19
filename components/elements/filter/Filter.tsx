@@ -26,9 +26,16 @@ import { ProfileBar } from '../profileBar';
 import axios from 'axios';
 import { v4 as uuidv4 } from 'uuid';
 
+type Project = {
+    title: string,
+    id: number,
+    seeking: number,
+
+}
+
 export const Filter = () => {
     const router = useRouter()
-    const [projects, setProjects] = useState([])
+    const [projects, setProjects] = useState<Project[]>([])
 
     const handleClick = async (filter?: string) => {
         console.log(filter)
@@ -55,7 +62,6 @@ export const Filter = () => {
                     },
                 });
                 const { data } = res
-                console.log(data)
                 setProjects(data)
             } catch (error) {
                 console.log(error)
@@ -74,8 +80,8 @@ export const Filter = () => {
             </TabList>
             <TabPanels py={5}>
                 {
-                    projects && projects.map((project) => (
-                        <ProfileBar title={project.title} seeking={project.seeking} bgColor={'#212C3B'} headingColor={'white'} radius={6} customPadding={[3, 5]} key={uuidv4()} />
+                    projects && projects.length && projects.map((project) => (
+                        <ProfileBar id={project.id} title={project.title} seeking={project.seeking} bgColor={'#212C3B'} headingColor={'white'} radius={6} customPadding={[3, 5]} key={uuidv4()} />
                     ))
                 }
                 <TabPanel>

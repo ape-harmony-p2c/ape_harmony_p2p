@@ -40,9 +40,17 @@ import { mainnet, polygon, optimism, arbitrum } from 'wagmi/chains';
 import { alchemyProvider } from 'wagmi/providers/alchemy';
 import { publicProvider } from 'wagmi/providers/public';
 
-export const YourProjects = ({ address }: { address: string | undefined }) => {
+
+type Project = {
+    title: string,
+    id: number,
+    seeking: number,
+
+}
+
+export const YourProjects = ({ address }: { address: string | string[] | undefined }) => {
     const router = useRouter()
-    const [projects, setProjects] = useState([])
+    const [projects, setProjects] = useState<Project[]>([])
 
     const handleClick = async (filter: string) => {
         console.log(filter)
@@ -110,8 +118,8 @@ export const YourProjects = ({ address }: { address: string | undefined }) => {
                     </h2>
                     <AccordionPanel pb={4}>
                         {
-                            projects && projects.map((project) => (
-                                <ProfileBar title={project.title} seeking={project.seeking} bgColor={'#212C3B'} headingColor={'white'} radius={6} customPadding={[3, 5]} key={uuidv4()} />
+                            projects && projects.length && projects.map((project) => (
+                                <ProfileBar id={project.id} title={project.title} seeking={project.seeking} bgColor={'#212C3B'} headingColor={'white'} radius={6} customPadding={[3, 5]} key={uuidv4()} />
                             ))
                         }
                     </AccordionPanel>

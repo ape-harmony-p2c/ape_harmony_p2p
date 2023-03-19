@@ -34,7 +34,7 @@ export interface ProfileFormValues {
 }
 
 interface ProfileFormProps {
-    address: string | undefined,
+    address: string | string[] | undefined,
     // isFetching: boolean
     isUser: boolean
     prefillUser?: ProfileFormValues
@@ -101,7 +101,7 @@ export const ProfileForm = ({
                             overflow="hidden"
                             mb='40px'
                         >
-                            {address && <Jazzicon diameter={200} seed={jsNumberForAddress(address)} />}
+                            {typeof address === 'string' && <Jazzicon diameter={200} seed={jsNumberForAddress(address)} />}
                             {/* {initialValues.imgUrl ? (
                                 <Image
                                     src={initialValues.imgUrl}
