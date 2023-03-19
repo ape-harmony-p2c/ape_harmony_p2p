@@ -32,6 +32,8 @@ Wouldn't wouldn't it be more effective if we provided the means to monetize asse
 
 For example Jason a BAYC holder wants to fund Amy another BAYC holder for a project she is working on to create a new brand of headphones called ApeRoar because let's face it, Beats is not the only good brand name for headphones. Jason can deposit his NFT in the BAYC pool on Pooled NFT directly from the Ape Harmony UI, and purchase the ERC20 tokens representing contributions to Amy's project. And all this can be done without ever even leaving the Ape Harmony ecosystem.
 
+**********
+
 ### NFT CROWDFUNDING
 
 The crowdfunding market is more than 24 billion USD and is virtually non-existent in the NFT economy. Why is that? When an NFT collection mints it is in fact a kind of pre-sale but against some future more or less undefined utility. Crowdfunding is a form of pre-sale but with a well defined future utility, usually in the form of one or more of the products the creators are building. This model can certainly be applied within NFT communities as well.
