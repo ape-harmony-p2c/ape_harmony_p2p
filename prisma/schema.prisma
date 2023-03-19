@@ -1,6 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -11,62 +8,68 @@ datasource db {
 }
 
 model User {
-  address         String   @id @unique
+  address         String         @id @unique
   userName        String?
   bio             String?
   profileTokenId  String?
   primaryFunction String?
-  twitter         String?  @unique
-  lastSignin      DateTime @updatedAt
-
-  crowdSales   CrowdSale[]
-  comments     Comment[]
-  commentVotes CommentVote[]
+  twitter         String?        @unique
+  lastSignin      DateTime       @updatedAt
+  comments        Comment[]
+  commentVotes    CommentVote[]
+  Contribution    Contribution[]
+  crowdSales      CrowdSale[]
 }
 
 model CrowdSale {
-  id        Int      @id @default(autoincrement())
-  title     String
-  body      String
-  info      String
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-
-  createdBy   User   @relation(fields: [createdById], references: [address])
-  createdById String
-
+  id           Int            @id @default(autoincrement())
+  title        String
+  body         String
+  info         String
+  endingAt     DateTime
+  seeking      String
+  createdAt    DateTime       @default(now())
+  updatedAt    DateTime       @updatedAt
+  createdById  String
   comments     Comment[]
   commentVotes CommentVote[]
+  Contribution Contribution[]
+  createdBy    User           @relation(fields: [createdById], references: [address])
 }
 
 model Comment {
-  id        Int      @id @default(autoincrement())
-  body      String
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-
-  createdBy   User   @relation(fields: [createdById], references: [address])
-  createdById String
-
-  crowdSale   CrowdSale @relation(fields: [crowdSaleId], references: [id])
-  crowdSaleId Int
-
-  parentComment   Comment? @relation("NestedComment", fields: [parentCommentId], references: [id])
+  id              Int           @id @default(autoincrement())
+  body            String
+  createdAt       DateTime      @default(now())
+  updatedAt       DateTime      @updatedAt
+  createdById     String
+  crowdSaleId     Int
   parentCommentId Int?
-
-  childComments Comment[]     @relation("NestedComment")
-  commentVotes  CommentVote[]
+  createdBy       User          @relation(fields: [createdById], references: [address])
+  crowdSale       CrowdSale     @relation(fields: [crowdSaleId], references: [id])
+  parentComment   Comment?      @relation("NestedComment", fields: [parentCommentId], references: [id])
+  childComments   Comment[]     @relation("NestedComment")
+  commentVotes    CommentVote[]
 }
 
 model CommentVote {
-  id    Int @id @default(autoincrement())
-  value Int
-
-  comment   Comment @relation(fields: [commentId], references: [id])
-  commentId Int
-
-  voter       User       @relation(fields: [voterId], references: [address])
+  id          Int        @id @default(autoincrement())
+  value       Int
+  commentId   Int
   voterId     String
-  CrowdSale   CrowdSale? @relation(fields: [crowdSaleId], references: [id])
   crowdSaleId Int?
+  comment     Comment    @relation(fields: [commentId], references: [id])
+  CrowdSale   CrowdSale? @relation(fields: [crowdSaleId], references: [id])
+  voter       User       @relation(fields: [voterId], references: [address])
+}
+
+model Contribution {
+  id          Int       @id @default(autoincrement())
+  amount      String
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  userId      String
+  crowdSaleId Int
+  crowdSale   CrowdSale @relation(fields: [crowdSaleId], references: [id])
+  user        User      @relation(fields: [userId], references: [address])
 }

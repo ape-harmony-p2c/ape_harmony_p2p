@@ -28,6 +28,7 @@ import { UserContextProvider } from '@/contexts/userContext';
 
 
 const alchemyId = process.env.ALCHEMY_KEY!;
+console.log(alchemyId)
 
 const { chains, provider } = configureChains(
   [mainnet, goerli, polygon, optimism, arbitrum],
@@ -55,16 +56,16 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <WagmiConfig client={wagmiClient}>
       <SiweProvider>
-      <RainbowKitUseSiweProvider onSignIn={signin}>
-      <RainbowKitProvider chains={chains}>
-        <ChakraProvider>
-        <NavigationBar />
-          <UserContextProvider >
-            <Component {...pageProps} />
-          </UserContextProvider>
-        </ChakraProvider>
-      </RainbowKitProvider>
-      </RainbowKitUseSiweProvider>
+        <RainbowKitUseSiweProvider onSignIn={signin}>
+          <RainbowKitProvider chains={chains}>
+            <ChakraProvider>
+              <NavigationBar />
+              <UserContextProvider >
+                <Component {...pageProps} />
+              </UserContextProvider>
+            </ChakraProvider>
+          </RainbowKitProvider>
+        </RainbowKitUseSiweProvider>
       </SiweProvider>
     </WagmiConfig>
   )

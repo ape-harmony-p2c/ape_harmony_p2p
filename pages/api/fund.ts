@@ -9,24 +9,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   const authenticatedUser = req.session.address
   const userAddress = req.query.userAddress?.toString().toLowerCase()
   switch (method) {
-    
-    case 'GET':
-        //unauthticated get request to find a user profile given a wallet address
-        try{
-        const user = await prisma.user.findFirst({
-            where:{
-                address: userAddress
-            } 
-        });
-        res.send(user);
-    }catch (error){
-        console.log(error);
-        res.send({
-            message: false
-        })
-    }
-      break
-    case 'PUT':
+    case 'Post':
         const { _userName, _bio, _twitter, _profileTokenID, _primaryFunction } = req.body;
         if (!authenticatedUser) return res.status(401).send("Unauthorized");
         try{
