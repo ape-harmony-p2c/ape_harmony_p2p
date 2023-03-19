@@ -1,4 +1,4 @@
-## APE HARMONY P2C (peer-to-community funding)
+## APE HARMONY P2C
 
 *****************
 
@@ -17,6 +17,10 @@ GO FUND YOURSELF!
 _or whatever_
 
 ***********
+
+_The first Peer to **Community** funding ecosystem_
+
+*************
 
 ### END TO END FINANCING FOR CREATORS
 
