@@ -53,7 +53,7 @@ export const RecentlyFunded = () => {
                 </AccordionButton>
                 </h2>
                 <AccordionPanel pb={4}>
-                <ProfileBar />
+                <ProfileBar bgColor={'initial'} headingColor={'white'} customPadding={[0]} radius={0}/>
                 </AccordionPanel>
             </AccordionItem>
         </Accordion>
