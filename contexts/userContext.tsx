@@ -34,7 +34,7 @@ export const UserContextProvider = (props: any) => {
     // read wallet's balance of USDC
     const { data: ReadUSDC } = useBalance({
         address: address,
-        token: '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48', // USDC contract address
+        token: '0xC4B0FaB89fe569632BcB2E4824953ec8a1adC22d', // Fake USDC contract address
       })
     
     // grab all info and set state in hooks to prevent hydration errors
