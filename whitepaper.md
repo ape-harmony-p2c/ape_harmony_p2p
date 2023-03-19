@@ -1,4 +1,4 @@
-## APE HARMONY P2C (PEER-TO-COMMUNITY) FUNDING
+## APE HARMONY P2C (peer-to-community funding)
 
 *****************
 
