@@ -22,22 +22,25 @@ model User {
   crowdSales   CrowdSale[]
   comments     Comment[]
   commentVotes CommentVote[]
+  Contribution Contribution[]
 }
 
 model CrowdSale {
-  id        Int      @id @default(autoincrement())
-  title     String
-  body      String
-  info      String
-  endingAt DateTime
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  id         Int      @id @default(autoincrement())
+  title      String
+  body       String
+  info       String
+  endingAt   DateTime
+  maxFunding String?
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
 
   createdBy   User   @relation(fields: [createdById], references: [address])
   createdById String
 
   comments     Comment[]
   commentVotes CommentVote[]
+  Contribution Contribution[]
 }
 
 model Comment {
@@ -70,4 +73,16 @@ model CommentVote {
   voterId     String
   CrowdSale   CrowdSale? @relation(fields: [crowdSaleId], references: [id])
   crowdSaleId Int?
+}
+
+model Contribution {
+  id        Int      @id @default(autoincrement())
+  amount    String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  user        User      @relation(fields: [userId], references: [address])
+  userId      String
+  crowdSale   CrowdSale @relation(fields: [crowdSaleId], references: [id])
+  crowdSaleId Int
 }

@@ -39,7 +39,8 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
                     const crowdSale = await prisma.crowdSale.findFirst({
                         where:{
                             id: parseInt(_crowdSaleId as string)
-                        }
+                        },
+                        include: { Contribution: { include: { user: true } } }
                     })
                     res.send(crowdSale)
                     return
@@ -50,6 +51,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
                     orderBy: {
                       createdAt: 'desc',
                     },
+                    include: { Contribution: { include: { user: true } } }
                   };
                 
                   switch (_sortBy) {
@@ -63,7 +65,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
                     case 'endingSoon':
                       queryFilters.where = {
                         endingAt: {
-                          lt: new Date(),
+                          lt: new Date(Date.now()).toISOString(),
                         },
                       };
                       queryFilters.orderBy = {
@@ -73,7 +75,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
                     case 'complete':
                       queryFilters.where = {
                         endingAt: {
-                          lt: new Date(),
+                          lt: new Date(Date.now()).toISOString(),
                         },
                       };
                       break;
