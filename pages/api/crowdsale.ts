@@ -34,8 +34,16 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
             }
             break
         case 'GET':
-            const { _sortBy, _skip, _take, _crowdSaleId } = req.query;
+            const { _sortBy, _skip, _take, _crowdSaleId, _userAddress } = req.query;
             try {
+                if(_userAddress){
+                    const crowdSales = await prisma.crowdSale.findMany({
+                        where: {
+                          createdById: _userAddress.toString(),
+                        },
+                      });
+                      res.send(crowdSales)
+                }
                 if (_crowdSaleId){
                     const crowdSale = await prisma.crowdSale.findFirst({
                         where:{
