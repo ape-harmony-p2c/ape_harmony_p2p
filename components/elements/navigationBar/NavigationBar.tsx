@@ -1,18 +1,8 @@
+import { useState } from 'react';
 import {
-    Box,
     Flex,
     Link,
     Button,
-    Image,
-    HStack,
-    LinkBox,
-    LinkOverlay,
-    IconButton,
-    Menu,
-    MenuButton,
-    MenuList,
-    MenuItem,
-    Text,
     Show,
     Hide
 } from '@chakra-ui/react'
@@ -27,51 +17,79 @@ import { ConnectButton } from '@rainbow-me/rainbowkit';
 
 export const NavigationBar = () => {
     const router = useRouter()
+    const [location, setLocation] = useState('home')
 
     return (
         <Flex
             position="absolute"
             top={0}
-            justifyContent={['initial', null, 'center']}
-            width="100%"
+            justifyContent={['left', null, null, null, 'center']}
+            width={["100%"]}
+            mb={'40px'}
         >
-            <Flex
+            {/* <Flex
                 justifyContent="center"
                 width="100%"
                 backgroundColor="white"
                 opacity={0.99}
-            >
-                <Flex
-                    flexDirection="row"
-                    justifyContent="space-between"
-                    alignItems="center"
-                    height={['100px', null, '160px']}
-                    width={['100%', null, null, null, '80em']}
-                    paddingLeft={4}
-                    paddingRight={4}
-                    marginLeft={[0, null, 4]}
-                    marginRight={[0, null, 4]}
-                >
-                    <Flex>
-                        <Hide below='md'>
-                            <Link as={NextLink} href={routes.HOME}>
-                                <Button rounded='.75rem' bgColor='white' aria-label='home' p='.75rem' m='.5rem' boxShadow="inset 0 0 0 2px #DFE4EC,0 2px 0 0 #DFE4EC,0px 2px 4px rgba(0,0,0,0.02);">
-                                    Home
-                                </Button>
-                            </Link>
-                        </Hide>
-                        <Show below='md'>
-                            <Link as={NextLink} href={routes.FUNDINGS}>
-                                <Button rounded='.75rem' bgColor='white' aria-label='fund stuff' p='.75rem' m='.5rem' boxShadow="inset 0 0 0 2px #DFE4EC,0 2px 0 0 #DFE4EC,0px 2px 4px rgba(0,0,0,0.02);">
-                                    Fund Stuff
-                                </Button>
-                            </Link>
-                        </Show>
-                        <ConnectButton />
-                    </Flex>
-                </Flex>
+            > */}
+            {/* <Flex
+                flexDirection="row"
+                justifyContent="space-between"
+                alignItems="center"
+                height={['100px', null, '160px']}
+                width={['100%', null, null, null, '80em']}
+                paddingLeft={4}
+                paddingRight={4}
+                marginLeft={[0, null, 4]}
+                marginRight={[0, null, 4]}
+            > */}
+            < Flex mt={'20px'} ml={['30px', null, '40px', '80px', '0px']} >
+                <Link as={NextLink} href={routes.HOME}>
+                    <Button
+                        size={['sm', null, 'lg']}
+                        onClick={() => { setLocation('home') }}
+                        borderColor={location === 'home' ? 'teal' : 'none'}
+                        border={location === 'home' ? '2px' : 'none'}
+                        bgColor={location === 'home' ? 'gray.100' : 'none'}
+                        mr={['10px', null, null, '20px']}
+                        color='teal'
+                        variant={'ghost'}
+                        rounded='.75rem'
+                        aria-label='home'
+                        p='.75rem'
+                    >
+                        Home
+                    </Button>
+                </Link>
+                <Link as={NextLink} href={routes.LOOKING_FOR}>
+                    <Button
+                        size={['sm', null, 'lg']}
+                        onClick={() => { setLocation('fundings') }}
+                        rounded='.75rem'
+                        color='teal'
+                        variant={'ghost'}
+                        aria-label='fund stuff'
+                        p='.75rem'
+                        borderColor={location === 'fundings' ? 'teal' : 'none'}
+                        border={location === 'fundings' ? '2px' : 'none'}
+                        bgColor={location === 'fundings' ? 'gray.100' : 'none'}
+                    >
+                        Fund Stuff
+                    </Button>
+                </Link>
+            </Flex >
+            <Flex h={['32px', null, '48px']} position={'absolute'} top={['20px', null, '20px']} right={['4px', null, '20px']}>
+                <ConnectButton
+                    accountStatus={{
+                        smallScreen: 'avatar',
+                        largeScreen: 'full',
+                    }}
+                />
             </Flex>
-        </Flex>
+            {/* </Flex> */}
+            {/* </Flex> */}
+        </Flex >
     )
 
 }
