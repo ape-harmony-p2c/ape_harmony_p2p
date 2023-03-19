@@ -28,6 +28,7 @@ async function seedCrowdSales() {
         title: faker.lorem.words(3),
         body: faker.lorem.paragraph(),
         info: `Information about crowd sale ${i}`,
+        seeking: faker.datatype.number({max: 20000}).toString(),
         endingAt: new Date(Date.now() + 86400000 * i).toISOString(), // Ending in i days
         createdById: users[i-1].address,
       });

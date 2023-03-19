@@ -12,7 +12,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 
         case 'POST':
             if (!authenticatedUser) return res.status(401).send("Unauthorized");
-            const { _title, _body, _info, _endingAt } = req.body
+            const { _title, _body, _info, _endingAt, _seeking } = req.body
             try {
                 const crowdSale = await prisma.crowdSale.create({
                     data: {
@@ -20,6 +20,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
                         body: _body,
                         info: _info,
                         endingAt: _endingAt,
+                        seeking: _seeking,
                         createdBy: { connect: { address: authenticatedUser.toLowerCase() } }
                     }
 
