@@ -3,8 +3,15 @@ A kickstarter model funding ecosystem for creators and members of NFT communitie
 
 ### END TO END FINANCING FOR CREATORS
 
+The biggest problem facing creators is the difficulty in raising sufficient financing in order to produce content or products on a professional level. For example in Hollywood, the typical pipeline from development to distribution of films can take several years, and this is magnified when the creators are newcomers operating on a grassroots level. The hunt for financing can be long and difficult, and connecting your investors and bankers to the distributor or studio in order to close the deal, requires engaging attorneys and others with similar experience.
 
+Web3 changes the rules of all that. Ape Harmony understands that one of the main objectives for NFT collections is the development of their IP. Whether this be in the form of cartoons, comic books, YouTube videos, toys and merchandise, branding of a new soft drink, or anything else, utilizing the IP in new and creative ways is a major goal of every NFT collection.
 
+At Ape Harmony holders of NFTs in a collection can post requests for funding from other holders of the same NFT. The use cases are wide but this will usually be to create something which develops the IP of the NFT in question. Otherwise why would the community want to fund it? But where does this funding from?
+
+Of course these NFT holders can use their savings or spare ETH in their metamask to fund projects on Ape Harmony P2C, but wouldn't it be more effective if we provided the means to monetize assets which they already have including the NFTs in the collection they want to support? Not only do we provide an ecosystem where NFT holders seeking funding can do so in a frictionless way, but through integration with protocols like Pooled NFT we also provide potential funders with the means to leverage their holdings.
+
+For example Jason a BAYC holder wants to fund Amy another BAYC holder for a project she is working on to create a new brand of headphones called ApeRoar because let's face it, Beats is not the only good brand name for headphones. Jason can deposit his NFT in the BAYC pool on Pooled NFT directly from the Ape Harmony UI, and purchase the ERC20 tokens representing contributions to Amy's project. And all this can be done without ever even leaving the Ape Harmony ecosystem.
 
 ### INCREASE IP VALUE FOR NFT COLLECTIONS
 
