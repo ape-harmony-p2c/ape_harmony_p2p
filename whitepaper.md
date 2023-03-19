@@ -2,13 +2,13 @@
 
 GO FUND YOURSELF!
 
-Why? _Your NFT community understands you._
+Why?... _Your NFT community understands you._
 
-How come? _You have the same goals._ 
+How come?... _You have the same goals._ 
 
-What? _You like the same stupid jpegs_ 
+What?... _You like the same stupid jpegs_ 
 
-_...and they just might be crazy enough to believe in your vision for a Bored Ape petting zoo with real apes._
+### _...and they just might be crazy enough to believe in your vision for a Bored Ape petting zoo with real apes._
 
 _Or whatever other crazy idea you dream up!_ 
 
