@@ -1,7 +1,5 @@
 ## APE HARMONY P2C
 
-*****************
-
 GO FUND YOURSELF!
 
 *****************
