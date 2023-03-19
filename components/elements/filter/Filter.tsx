@@ -80,7 +80,7 @@ export const Filter = () => {
                 </TabList>
                 <TabPanels py={5}>
                     {
-                        projects && projects.map((project) => (
+                        projects && projects.length && projects.map((project) => (
                             <ProfileBar id={project.id} title={project.title} seeking={project.seeking} bgColor={'#212C3B'} headingColor={'white'} radius={6} customPadding={[3, 5]} key={uuidv4()} />
                         ))
                     }
