@@ -44,11 +44,13 @@ What about the arts? Many Kickstarter projects are for making a movie or somethi
 
 ************
 
-### INCREASE IP VALUE FOR NFT COLLECTIONS
+### BOOST THE VALUE OF YOUR NFT's IP
 
 We understand that a primary objective for all NFT collections is the development of their IP. Whether this be in the form of cartoons, comic books, YouTube videos, toys and merchandise, branding of a new soft drink, or a petting zoo with real apes, utilizing the IP in new and creative ways is a major goal of every NFT collection.
 
 Holders of NFTs can now use Ape Harmony P2C to create requests for funding from other holders of their NFT. This is peer to community funding. The use cases are wide but this will usually be to create something which develops the IP of the NFT in question. Otherwise why would the community want to fund it?
+
+**************
 
 ### HOW DOES IT ALL WORK?
 
