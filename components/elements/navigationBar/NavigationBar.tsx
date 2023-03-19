@@ -3,10 +3,7 @@ import {
     Flex,
     Link,
     Button,
-    Show,
-    Hide,
     useColorMode,
-    Switch,
     IconButton
 } from '@chakra-ui/react'
 import { useRouter } from 'next/router';
@@ -33,23 +30,6 @@ export const NavigationBar = () => {
             width={["100%"]}
             mb={'40px'}
         >
-            {/* <Flex
-                justifyContent="center"
-                width="100%"
-                backgroundColor="white"
-                opacity={0.99}
-            > */}
-            {/* <Flex
-                flexDirection="row"
-                justifyContent="space-between"
-                alignItems="center"
-                height={['100px', null, '160px']}
-                width={['100%', null, null, null, '80em']}
-                paddingLeft={4}
-                paddingRight={4}
-                marginLeft={[0, null, 4]}
-                marginRight={[0, null, 4]}
-            > */}
             < Flex mt={'20px'} ml={['30px', null, '40px', '80px', '0px']} >
                 <Link as={NextLink} href={routes.HOME}>
                     <Button
@@ -93,19 +73,17 @@ export const NavigationBar = () => {
                     }}
                 />
                 <IconButton
+
                     ml={4}
                     onClick={toggleColorMode}
-                    icon={colorMode === "light" ? <MoonIcon /> : <SunIcon />}
+                    icon={colorMode === "light" ? <MoonIcon /> : <SunIcon color={'orange'} />}
                     aria-label="Toggle light/dark mode"
                     borderRadius="full"
-                      bg={isHovered ? "gray.300" : "gray.200"}
                     _hover={{ bg: "gray.300" }}
                       onMouseEnter={() => setIsHovered(true)}
                       onMouseLeave={() => setIsHovered(false)}
                     />
             </Flex>
-            {/* </Flex> */}
-            {/* </Flex> */}
         </Flex >
     )
 
