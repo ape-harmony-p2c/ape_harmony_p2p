@@ -18,9 +18,11 @@ The biggest problem facing creators is the difficulty in raising sufficient fina
 
 Ape Harmony changes the rules of this shitty game. We understand that a primary objective for all NFT collections is the development of their IP. Whether this be in the form of cartoons, comic books, YouTube videos, toys and merchandise, branding of a new soft drink, or a petting zoo with real apes, utilizing the IP in new and creative ways is a major goal of every NFT collection.
 
-At Ape Harmony holders of NFTs in a collection can post requests for funding from other holders of the same NFT. The use cases are wide but this will usually be to create something which develops the IP of the NFT in question. Otherwise why would the community want to fund it? But where does this funding from?
+Holders of NFTs can now use Ape Harmony P2C to create requests for funding from other holders of their NFT. This is peer to community funding. The use cases are wide but this will usually be to create something which develops the IP of the NFT in question. Otherwise why would the community want to fund it?
 
-Of course these NFT holders can use their savings or spare ETH in their metamask to fund projects on Ape Harmony P2C, but wouldn't it be more effective if we provided the means to monetize assets which they already have including the NFTs in the collection they want to support? Not only do we provide an ecosystem where NFT holders seeking funding can do so in a frictionless way, but through integration with protocols like Pooled NFT we also provide potential funders with the means to leverage their holdings.
+Where does this funding come from? Of course these NFT holders can use their savings or spare ETH in their metamask but...
+
+Wouldn't wouldn't it be more effective if we provided the means to monetize assets which they already have including the NFTs in the collection they want to support? Not only do we provide an ecosystem where NFT holders seeking funding can do so in a frictionless way, but through integration with protocols like Pooled NFT we also provide potential funders with the means to leverage their holdings.
 
 For example Jason a BAYC holder wants to fund Amy another BAYC holder for a project she is working on to create a new brand of headphones called ApeRoar because let's face it, Beats is not the only good brand name for headphones. Jason can deposit his NFT in the BAYC pool on Pooled NFT directly from the Ape Harmony UI, and purchase the ERC20 tokens representing contributions to Amy's project. And all this can be done without ever even leaving the Ape Harmony ecosystem.
 
