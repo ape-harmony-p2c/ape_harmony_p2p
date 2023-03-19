@@ -9,7 +9,7 @@ NFT owners can fund further NFT projects around their NFT IP as well as engage w
 3- Community members fund a project and receive rewards as a percentage of the final product
 
 MARKET SIZE: 
-Kickstarter is the top fundraising plactform outside Crypto: https://growjo.com/company/Kickstarter. According to Decrypt, "The NFT market generated around $24.7 billion worth of organic trading volume in 2022 across blockchain platforms and marketplaces..." If a modest 10% of the total market, uses our platform as a form of funding to generate community support, pre-sales and engagement, we have an estimated $2.47B in transaction volume and our revenue would be a percentage of that.
+According to Statista, "In 2020, the volume of funds raised through crowdfunding worldwide amounted to 114 billion U.S. dollars. In that year, 4.41 billion U.S. dollars was generated through equity-based crowdfunding globally." According to Decrypt, "The NFT market generated around $24.7 billion worth of organic trading volume in 2022 across blockchain platforms and marketplaces..." If a modest 10% of the total market, uses our platform as a form of funding to generate community support and engagement, we have an estimated $2.47B in transaction volume and our revenue would be a percentage of that.
 
 TARGET MARKET: 
 NFT creators can use our tool to fund/pre-sell projects as well as generate community engagement. 
