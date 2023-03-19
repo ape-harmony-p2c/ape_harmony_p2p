@@ -154,7 +154,7 @@ export const FundingPage: NextPage<FundingPageProps> = ({csid}: FundingPageProps
             }
         }
         fetchData();
-      }, []);
+      }, [csid]);
 
     return (
         <Flex justify="center" bgColor='#0F0F16' pt={90} px={[2, 3, null, 6]}>
