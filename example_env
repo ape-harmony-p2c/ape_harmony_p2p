@@ -1,0 +1,2 @@
+SECRET_COOKIE_PASSWORD= "complex_password_at_least_32_characters_long"
+DATABASE_URL="postgresql://postgres:NBQXvv6H3NYvCqg@db.grluavlzeriosntnnben.supabase.co:5432/postgres"

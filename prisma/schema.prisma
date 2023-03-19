@@ -1,0 +1,72 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  address         String   @id @unique
+  userName        String?
+  bio             String?
+  profileTokenId  String?
+  primaryFunction String?
+  twitter         String?  @unique
+  lastSignin      DateTime @updatedAt
+
+  crowdSales   CrowdSale[]
+  comments     Comment[]
+  commentVotes CommentVote[]
+}
+
+model CrowdSale {
+  id        Int      @id @default(autoincrement())
+  title     String
+  body      String
+  info      String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  createdBy   User   @relation(fields: [createdById], references: [address])
+  createdById String
+
+  comments     Comment[]
+  commentVotes CommentVote[]
+}
+
+model Comment {
+  id        Int      @id @default(autoincrement())
+  body      String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  createdBy   User   @relation(fields: [createdById], references: [address])
+  createdById String
+
+  crowdSale   CrowdSale @relation(fields: [crowdSaleId], references: [id])
+  crowdSaleId Int
+
+  parentComment   Comment? @relation("NestedComment", fields: [parentCommentId], references: [id])
+  parentCommentId Int?
+
+  childComments Comment[]     @relation("NestedComment")
+  commentVotes  CommentVote[]
+}
+
+model CommentVote {
+  id    Int @id @default(autoincrement())
+  value Int
+
+  comment   Comment @relation(fields: [commentId], references: [id])
+  commentId Int
+
+  voter       User       @relation(fields: [voterId], references: [address])
+  voterId     String
+  CrowdSale   CrowdSale? @relation(fields: [crowdSaleId], references: [id])
+  crowdSaleId Int?
+}
