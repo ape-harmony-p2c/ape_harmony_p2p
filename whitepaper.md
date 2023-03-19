@@ -4,7 +4,7 @@ GO FUND YOURSELF!
 
 _Your NFT community understands you._
 
-_You have the same goals. You like the same jpegs_ 
+_You have the same goals. You like the same stupid jpegs_ 
 
 _...and they just might be crazy enough to believe in your vision for a Bored Ape petting zoo with real apes._
 
