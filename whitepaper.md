@@ -38,9 +38,11 @@ For example Jason a BAYC holder wants to fund Amy another BAYC holder for a proj
 
 ______________
 
-### CROWDFUNDING for NFTs
+### CROWDFUNDING and CREATOR ECONOMY
 
-The crowdfunding market in 2020 was worth around 114 billion USD and as of today it is virtually non-existent in the NFT economy. NFT sales in 2022 total volume was around 24 billion USD. Both big numbers. Let's put them together! When an NFT collection mints it is in fact a kind of pre-sale but against some future more or less undefined utility. Crowdfunding is a form of pre-sale but with a well defined future utility, usually in the form of one or more of the products the creators are building. This model can certainly be applied within NFT communities as well.
+NFT sales in 2022 total volume was around 24 billion USD. But the crowdfunding and creator economy is worth more that 100 billion USD. So market expansion is the way to go. When an NFT collection mints it is in fact a kind of pre-sale but against some future more or less undefined utility. Crowdfunding is a form of pre-sale but with a well defined future utility, usually in the form of one or more of the products the creators are building. So this model can certainly be applied within NFT communities as well.
+
+### CROWDFUNDING IN NFT COMMUNITIES
 
 Take for example a typical Kickstarter project. Right now the top trending Kickstarter project is a robotic lawnmower. It's not too difficult to imagine the branding for this product to be based on some NFT collection. Something robotic? Crypto Punks and Nouns are pixel art which is kind of robotic. Nouns robotic lawnmower, anyone? But you don't need to invent something to sell to your own NFT community. Bored Apes for example are happy to support and buy everyday products like beer, hot sauce or burgers as long as their NFT branding is on them.
 
