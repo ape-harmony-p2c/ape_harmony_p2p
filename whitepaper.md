@@ -1,5 +1,10 @@
 ## APE HARMONY P2C FUNDING
-A kickstarter model funding ecosystem for creators and members of NFT communities.
+
+GO FUND YOURSELF!
+
+_Your NFT community understands you.
+You have the same goals. You like the same jpegs
+...and they just might be crazy enough to believe in your vision for a Bored Ape petting zoo with real apes._
 
 ### END TO END FINANCING FOR CREATORS
 
