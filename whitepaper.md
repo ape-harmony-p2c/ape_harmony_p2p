@@ -87,7 +87,7 @@ Completed rounds are filtered as follows:
 3. Recent
 4. Most popular
 
-### HOW IT WORKS
+### THAT SECRET SAUCE
 
 Every round must include the amount the creator is seeking and the formula for distribution of value from the project being funded. This can be in either ETH, an ERC20 token specific to the funding hub's NFT collection like for example the ERC20 received in exchange for depositing your NFT on "Pooled NFTs", or some other form of value such as NFTs with some utility attached to it.
 
