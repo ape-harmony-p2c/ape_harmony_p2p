@@ -30,21 +30,20 @@ export const NavigationBar = () => {
             width={["100%"]}
             mb={'40px'}
         >
-            < Flex mt={'20px'} ml={['30px', null, '40px', '80px', '0px']} >
+            < Flex mt={'20px'} px={[2, 3, null, 6]} >
                 <Link as={NextLink} href={routes.HOME}>
                     <Button
                         size={['sm', null, 'lg']}
                         onClick={() => { setLocation('home') }}
-                        borderColor={location === 'home' ? 'teal' : 'none'}
+                        borderColor={location === 'home' ? '#A1F408' : 'none'}
                         border={location === 'home' ? '2px' : 'none'}
                         bgColor={location === 'home' ? 'gray.100' : 'none'}
                         mr={['10px', null, null, '20px']}
-                        color='teal'
+                        color='#A1F408'
                         variant={'ghost'}
                         rounded='.75rem'
                         aria-label='home'
-                        p='.75rem'
-                    >
+                        p='.75rem'>
                         Home
                     </Button>
                 </Link>
@@ -53,11 +52,11 @@ export const NavigationBar = () => {
                         size={['sm', null, 'lg']}
                         onClick={() => { setLocation('fundings') }}
                         rounded='.75rem'
-                        color='teal'
+                        color='#A1F408'
                         variant={'ghost'}
                         aria-label='Discover'
                         p='.75rem'
-                        borderColor={location === 'fundings' ? 'teal' : 'none'}
+                        borderColor={location === 'fundings' ? '#A1F408' : 'none'}
                         border={location === 'fundings' ? '2px' : 'none'}
                         bgColor={location === 'fundings' ? 'gray.100' : 'none'}
                     >
@@ -65,7 +64,7 @@ export const NavigationBar = () => {
                     </Button>
                 </Link>
             </Flex >
-            <Flex h={['32px', null, '48px']} position={'absolute'} top={['20px', null, '20px']} right={['4px', null, '20px']}>
+            <Flex h={['32px', null, '48px']} position={'absolute'} top={['20px', null, '20px']} right={['4px', null, '20px']} justify='center'>
                 <ConnectButton
                     accountStatus={{
                         smallScreen: 'avatar',
@@ -73,7 +72,6 @@ export const NavigationBar = () => {
                     }}
                 />
                 <IconButton
-
                     ml={4}
                     onClick={toggleColorMode}
                     icon={colorMode === "light" ? <MoonIcon /> : <SunIcon color={'orange'} />}
