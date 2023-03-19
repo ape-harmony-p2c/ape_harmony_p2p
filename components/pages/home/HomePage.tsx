@@ -2,6 +2,8 @@ import { useState } from 'react'
 import NextLink from 'next/link'
 import { AboutSection } from '@/components/elements/aboutSection/AboutSection'
 import { RecentlyFunded } from '@/components/elements/recentlyFunded'
+import { TopFunders } from '@/components/elements/topFunders'
+
 
 import {
     Flex,
