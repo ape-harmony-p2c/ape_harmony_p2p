@@ -62,27 +62,15 @@ We predict this will be used mostly for smaller projects in the beginning but it
 
 **************
 
-### HOW DOES IT ALL WORK?
+### EAZY PEAZY
 
-Every NFT collection can create its own funding hub on Ape Harmony P2C simply by connecting any wallet with an NFT from that collection to the Ape Harmony contract. Only owners of that specific NFT have access to post requests for funding but all users have access to view the content on the funding hub as well as contribute funds to funding rounds. 
+Using Ape Harmoeny P2C is simple. Every NFT collection can create its own funding hub on Ape Harmony P2C simply by connecting any wallet with an NFT from that collection to the Ape Harmony contract. Remember, only owners of that specific NFT have access to post requests for funding but all users have access to view the content on the funding hub as well as contribute funds to funding rounds. 
 
-The primary purpose of funding rounds is to utilize the IP of the NFT collection and in so doing provide utility and increase the value of the entire NFT collection, but the rounds can be used for whatever the funding proposer chooses. This kickstarter style funding is just one of the many ways that Ape Harmony will provide functionality to NFT holders for monetization and leveraging of the value of their NFTs.
+**FUNDING HUBS** are the primary point of reference for every NFT and its community on the Ape Harmony ecosystem. For example BAYC will have its own subdomain p2c.bayc.apeharmony.com where all comnunity funding functionality is available to the holder of any BAYC NFT. When a user visits a funding hub, he will see all the NFTs relating to that collection on his profile. For example Bored Ape holder Jason will see on his Ape Harmony profile all the NFTs in his wallet which give him member privileges in the BAYC funding hub. 
 
-Ape Harmony is working to deliver a wide array of derivatives and other financial instruments from NFTs including P2P loans, equity backed liens, futures and options, packaged assets and insurance. Many NFTs are worth as much as a house, so it makes sense that they should be monetized as such.
+**MEMBER PRIVILEGES** for holders of an NFT in the collection means the ability to create new rounds ie. requests for funding. In all other ways the UI will appear the same for both holders and non-holders. All member privilege configurations are user defined. This defaults to include the holder of any NFT in the collection (for example any BAYC holder) but as this is set by the NFT collection's deployer wallet, the BAYC funding hub can also be configured to give member privileges to anyone with a BAYC, MAYC, Otherside Deed, or any other NFT as well.
 
-### FUNDING HUBS
-
-Funding hubs are the primary point of reference for every NFT and its community on the Ape Harmony ecosystem. For example BAYC will have its own subdomain p2c.bayc.apeharmony.com where all comnunity funding functionality is available to the holder of any BAYC NFT. When a user visits a funding hub, he will see all the NFTs relating to that collection on his profile. For example Bored Ape holder Jason will see on his Ape Harmony profile all the NFTs in his wallet which give him member privileges in the BAYC funding hub. 
-
-### MEMBER PRIVILEGES
-
-The primary privilege for holders of an NFT in the collection vs non-holders is the ability to create new rounds ie. requests for funding. In all other ways the UI will appear the same for both holders and non-holders.
-
-All member privilege configurations are user defined. This defaults to include the holder of any NFT in the collection (for example any BAYC holder) but as this is set by the NFT collection's deployer wallet, the BAYC funding hub can also be configured to give member privileges to anyone with a BAYC, MAYC, Otherside Deed, or any other NFT as well.
-
-### ROUNDS
-
-Upon entering the funding hub of an NFT collection on Ape Harmony visitor will see a list of funding rounds ie. requests for funding associated with that NFT collection eg. BAYC. All rounds appear as posts and are organized in a list like a Reddit thread. Posts of new rounds can be seen as the first post in a thread and every post after that a comment on that primary post. Again only holders of that NFT collection are allowed to create rounds ie. start a thread, but anyone can comment in the thread after it is created. 
+**FUNDING ROUNDS** are what visitors will see when visiting the funding hub of an NFT collection on Ape Harmony. They appear as a list of such requests for funding associated with that NFT collection eg. BAYC, and are organized like Reddit threads. New rounds are like the first post in a Reddit thread and every post after that is like a comment. Again only holders of that NFT collection are allowed to create rounds ie. start a thread, but anyone can comment in the thread after it is created. 
 
 Rounds are divided into two categories: COMPLETED and ACTIVE.
 
@@ -109,13 +97,11 @@ When a user contributes to a round he receives ERC20 tokens specific to that rou
 
 The ERC20 tokens of each round can themselves be traded on the open market. Although we do not ourselves fund liquidity pools for these tokens which would directly create monetary value, as the primary purpose of these tokens is to create value in our own ecosystem ie. the "Disney dollars" model, it is possible that the round tokens themselves could have value outside our ecosystem as well through trading by users and other third parties.
 
+## WHAT ABOUT THAT FUTURE SHIZ?
 
+The main purpose of funding rounds is to utilize the IP of the NFT collection and in so doing provide utility and increase the value of the entire NFT collection, but the rounds can be used for whatever the funding proposer chooses. This kickstarter style funding is just one of the many ways that Ape Harmony will provide functionality to NFT holders for monetization and leveraging of the value of their NFTs.
 
-
-
-### COMMENTS
-
-If a visitor to the BAYC funding hub on Ape Harmony is not a Bored Ape holder, he will not be allowed to create new rounds, and therefore the only type of posts he can submit are comments on already created rounds. This includes both active and completed rounds, but as the purpose of these threads are to support and inquire about projects seeking funding, active rounds will have much higher activity than completed rounds.
+Ape Harmony is working to deliver a wide array of derivatives and other financial instruments from NFTs including P2P loans, equity backed liens, futures and options, packaged assets and insurance. Many NFTs are worth as much as a house, so it makes sense that they should be monetized as such.
 
 
 
