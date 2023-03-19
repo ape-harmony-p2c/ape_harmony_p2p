@@ -8,7 +8,7 @@ import {
   RainbowKitAuthenticationProvider,
   AuthenticationStatus
 } from '@rainbow-me/rainbowkit';
-import { configureChains, createClient, WagmiConfig } from 'wagmi';
+import { configureChains, createClient, WagmiConfig, useAccount } from 'wagmi';
 import { mainnet, goerli, polygon, optimism, arbitrum } from 'wagmi/chains';
 import { alchemyProvider } from 'wagmi/providers/alchemy';
 import { publicProvider } from 'wagmi/providers/public';
@@ -22,9 +22,11 @@ import useSignin from '@/hooks/useSignin';
 import useMemo from 'react'
 import { SiweMessage } from 'siwe';
 
-
-const alchemyId = 'YMYVZZmF7YdOUtdXKVP-OoKjlxhWa7nJ';
 //const sign = axios.post('api/authenticate');
+import { UserContextProvider } from '@/contexts/userContext';
+
+
+const alchemyId = process.env.ALCHEMY_KEY!;
 
 const { chains, provider } = configureChains(
   [mainnet, goerli, polygon, optimism, arbitrum],
@@ -48,6 +50,7 @@ const wagmiClient = createClient({
 
 export default function App({ Component, pageProps }: AppProps) {
   const { signin } = useSignin()
+  const { address } = useAccount()
   return (
     <WagmiConfig client={wagmiClient}>
       <SiweProvider>
@@ -55,7 +58,9 @@ export default function App({ Component, pageProps }: AppProps) {
       <RainbowKitProvider chains={chains}>
         <ChakraProvider>
         <NavigationBar />
-          <Component {...pageProps} />
+          <UserContextProvider >
+            <Component {...pageProps} />
+          </UserContextProvider>
         </ChakraProvider>
       </RainbowKitProvider>
       </RainbowKitUseSiweProvider>
