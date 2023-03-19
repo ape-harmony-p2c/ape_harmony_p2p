@@ -17,28 +17,27 @@ export const UserContext = createContext<IUserContextProps>({
 })
 
 export const UserContextProvider = (props: any) => {
-    // set some state
     const [isHolder, setIsHolder] = useState(false);
     const [USDC, setUSDC] = useState<BigNumber | number>(0)
     const [accountAddress, setAccountAddress] = useState('')
 
-    //use effect hooks to grab stuff from wagmi
-
+    // get wallet address
     const { address } = useAccount()
 
-    // balance of 721 - need to add deployed contract address
+    // read wallet's balance of 721 to check holder status
     const { data: balance, isError, isLoading } = useContractRead({
         address: '0xecb504d39723b0be0e3a9aa33d646642d1051ee1', // placeholder address - need deployed contract address
         abi: ERC20ABI,
         functionName: 'balanceOf',
     })
 
+    // read wallet's balance of USDC
     const { data: ReadUSDC } = useBalance({
         address: address,
-        token: '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48',
+        token: '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48', // USDC contract address
       })
-    // 
-
+    
+    // grab all info and set state in hooks to prevent hydration errors
     useEffect(() => {
         if (address) {
             setAccountAddress(address)

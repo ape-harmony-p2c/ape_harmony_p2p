@@ -12,7 +12,6 @@ import { publicProvider } from 'wagmi/providers/public';
 import type { AppProps } from 'next/app'
 import { ChakraProvider } from '@chakra-ui/react'
 import { NavigationBar } from '@/components/elements';
-import { createContext } from 'react';
 import { UserContextProvider } from '@/contexts/userContext';
 
 
@@ -36,21 +35,6 @@ const wagmiClient = createClient({
   connectors,
   provider
 })
-
-// export interface IUser {
-//   addreess: BigNumber;
-// }
-// export type UserContextType = {
-//   user: IUser[];
-// };
-
-// export type UserType = {
-//   address: any;
-// }
-
-// const UserContext = createContext<UserType | null>(null);
-
-
 
 export default function App({ Component, pageProps }: AppProps) {
   const { address } = useAccount()

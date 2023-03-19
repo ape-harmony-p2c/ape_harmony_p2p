@@ -10,6 +10,7 @@ import {
 
 export const HomePage = () => {
     const user = useContext(UserContext)
+    console.log(user)
     return (
         <Flex justify="center">
             <Flex align="center" direction="column" height="100vh" width="60vw">
