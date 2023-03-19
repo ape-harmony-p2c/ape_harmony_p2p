@@ -23,6 +23,6 @@ Gamification instruments: the most popular projects, those who fund the most pro
 TECH: 
 PooledNFT, Etherium, React, Solarium, 
 
-PROSPECTIVE USERS: 
-NFT creators. 
-Brands and celebrities can use our tool to engage with fans by creating their own NFT IP projects
+TARGET MARKET: 
+NFT creators can use our tool to fund/pre-sell projects as well as generate community engagement. 
+Brands and celebrities can use our tool to engage with fans by creating their own NFT IP projects.
