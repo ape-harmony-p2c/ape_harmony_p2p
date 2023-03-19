@@ -10,13 +10,9 @@ GO FUND YOURSELF!
 
 **What?**... _You like the same stupid jpegs_ 
 
-### _...So why wouldn't they believe in your vision for a Bored Ape petting zoo with real apes?_
+### _...Why wouldn't they believe in your vision for a Bored Ape petting zoo with real apes?_
 
-_or whatever_
-
-***********
-
-**Ape Harmony P2C**: _The first Peer to **Community** funding ecosystem_
+APE HARMONY... _It's time to start creating!_
 
 *************
 
