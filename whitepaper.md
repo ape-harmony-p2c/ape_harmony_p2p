@@ -26,6 +26,14 @@ Wouldn't wouldn't it be more effective if we provided the means to monetize asse
 
 For example Jason a BAYC holder wants to fund Amy another BAYC holder for a project she is working on to create a new brand of headphones called ApeRoar because let's face it, Beats is not the only good brand name for headphones. Jason can deposit his NFT in the BAYC pool on Pooled NFT directly from the Ape Harmony UI, and purchase the ERC20 tokens representing contributions to Amy's project. And all this can be done without ever even leaving the Ape Harmony ecosystem.
 
+### NFT CROWDFUNDING
+
+The crowdfunding market is more than 24 billion USD and is virtually non-existent in the NFT economy. Why is that? When an NFT collection mints it is in fact a kind of pre-sale but against some future more or less undefined utility. Crowdfunding is a form of pre-sale but with a well defined future utility, usually in the form of one or more of the products the creators are building. This model can certainly be applied within NFT communities as well.
+
+Take for example a typical Kickstarter project. Right now the top trending Kickstarter project is a robotic lawnmower. It's not too difficult to imagine the branding for this product to be based on some NFT collection. Something robotic? Crypto Punks and Nouns are pixel art which is kind of robotic. Nouns robotic lawnmower, anyone? But you don't need to invent something to sell to your own NFT community. Bored Apes for example are happy to support and buy everyday products like beer, hot sauce or burgers as long as their NFT branding is on them.
+
+What about the arts? Many Kickstarter projects are for making a movie or something else creative. Well what if you wanted to make the craziest most detailed and complex digital painting of the Pudgy Penguins universe ever created? You could raise funding for that on Ape Harmony and deliver ownership of that digital painting as an NFT as a join ownership token held by everyone who funded it. The opportunities are endless.
+
 ### INCREASE IP VALUE FOR NFT COLLECTIONS
 
 We understand that a primary objective for all NFT collections is the development of their IP. Whether this be in the form of cartoons, comic books, YouTube videos, toys and merchandise, branding of a new soft drink, or a petting zoo with real apes, utilizing the IP in new and creative ways is a major goal of every NFT collection.
