@@ -42,6 +42,8 @@ Take for example a typical Kickstarter project. Right now the top trending Kicks
 
 What about the arts? Many Kickstarter projects are for making a movie or something else creative. Well what if you wanted to make the craziest most detailed and complex digital painting of the Pudgy Penguins universe ever created? You could raise funding for that on Ape Harmony and deliver ownership of that digital painting as an NFT as a join ownership token held by everyone who funded it. The opportunities are endless.
 
+************
+
 ### INCREASE IP VALUE FOR NFT COLLECTIONS
 
 We understand that a primary objective for all NFT collections is the development of their IP. Whether this be in the form of cartoons, comic books, YouTube videos, toys and merchandise, branding of a new soft drink, or a petting zoo with real apes, utilizing the IP in new and creative ways is a major goal of every NFT collection.
