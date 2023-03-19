@@ -28,6 +28,7 @@ import { useRouter } from 'next/router';
 import NextLink from 'next/link';
 import '@rainbow-me/rainbowkit/styles.css';
 import { ProfileBar } from '../profileBar';
+import { v4 as uuidv4 } from 'uuid';
 import axios from 'axios';
 
 import {
@@ -39,7 +40,7 @@ import { mainnet, polygon, optimism, arbitrum } from 'wagmi/chains';
 import { alchemyProvider } from 'wagmi/providers/alchemy';
 import { publicProvider } from 'wagmi/providers/public';
 
-export const YourProjects = () => {
+export const YourProjects = ({ address }: { address: string }) => {
     const router = useRouter()
     const [projects, setProjects] = useState([])
 
@@ -48,7 +49,7 @@ export const YourProjects = () => {
         try {
             const res = await axios.get('./api/crowdsale', {
                 params: {
-                    _sortBy: filter,
+                    _userAddress: address,
                 },
             });
             const { data } = res
@@ -64,7 +65,7 @@ export const YourProjects = () => {
             try {
                 const res = await axios.get('./api/crowdsale', {
                     params: {
-                        _sortBy: 'mostUpvotes',
+                        _userAddress: address,
                     },
                 });
                 const { data } = res

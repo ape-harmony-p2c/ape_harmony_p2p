@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import NextLink from 'next/link'
 import { ProfileForm } from '@/components/elements/profileForm'
 import * as routes from '../../../constants/routes'
@@ -10,42 +10,45 @@ import {
     Button,
 
 } from '@chakra-ui/react'
+import { YourProjects } from '@/components/elements/';
+import { YourContributions } from '@/components/elements';
 
-interface ProfileFormProps {
-    address: string
+export interface ProfileFormValues {
+    name: string,
+    bio: string,
+    twitter: string,
+    primaryFunction: string,
 }
-
-export const ProfilePage = ({ address }: ProfileFormProps) => {
+export const ProfilePage = ({ address }: { address: string }) => {
     // Status state
     const [isFetching, setIsFetching] = useState(false)
     const [isUser, setIsUser] = useState(false)
-
+    const [user, setUser] = useState({})
     const prefillUser = {
-        imgUrl: '',
+        // imgUrl: '',
         name: '',
         bio: '',
         twitter: '',
         primaryFunction: '',
     }
-    const onSubmit = () => {
+    const onSubmit = (values: ProfileFormValues) => {
 
-        useEffect(() => {
-            async function fetchData() {
-                try {
-                    const res = await axios.get('./api/crowdsale', {
-                        params: {
-                            _sortBy: 'mostUpvotes',
-                        },
-                    });
-                    const { data } = res
-                    console.log(data)
-                    setProjects(data)
-                } catch (error) {
-                    console.log(error)
-                }
+        async function fetchData() {
+            try {
+                const res = await axios.put('./api/user', {
+                    _userName: values.name,
+                    _bio: values.bio,
+                    _twitter: values.twitter,
+                    _primaryFunction: values.primaryFunction
+                });
+                const { data } = res
+                console.log(data)
+            } catch (error) {
+                console.log(error)
             }
-            fetchData();
-        }, []);
+        }
+        fetchData();
+
     }
 
     return (
@@ -66,13 +69,13 @@ export const ProfilePage = ({ address }: ProfileFormProps) => {
                     </NextLink>
                 </Flex>
                 <ProfileForm
-                    isFetching={isFetching}
+                    // isFetching={isFetching}
                     isUser={isUser}
                     prefillUser={prefillUser}
                     onSubmit={onSubmit}
                 />
-                <Flex></Flex>
-                <Flex></Flex>
+                <YourProjects address={address} />
+                <YourContributions address={address} />
             </Flex>
         </Flex >
 

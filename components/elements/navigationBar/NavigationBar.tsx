@@ -67,15 +67,25 @@ export const NavigationBar = () => {
                     </Button>
                 </Link>
             </Flex >
-            <Flex h={['32px', null, '48px']} position={'absolute'} top={['20px', null, '20px']} right={['4px', null, '20px']}>
-                {/* <Link as={NextLink} href={address ? routes.PROFILE}> */}
-                <ConnectButton
-                    accountStatus={{
-                        smallScreen: 'avatar',
-                        largeScreen: 'full',
-                    }}
-                />
-                {/* </Link> */}
+            <Flex display={address ? 'block' : 'none'} h={['32px', null, '48px']} position={'absolute'} top={['20px', null, '20px']} right={['4px', null, '20px']}>
+                <Link as={NextLink} href={`/profile/${address}`}>
+                    <ConnectButton
+                        accountStatus={{
+                            smallScreen: 'avatar',
+                            largeScreen: 'full',
+                        }}
+                    />
+                </Link>
+            </Flex>
+            <Flex display={!address ? 'block' : 'none'} h={['32px', null, '48px']} position={'absolute'} top={['20px', null, '20px']} right={['4px', null, '20px']}>
+                <Link as={NextLink} href={`/profile/${address}`}>
+                    <ConnectButton
+                        accountStatus={{
+                            smallScreen: 'avatar',
+                            largeScreen: 'full',
+                        }}
+                    />
+                </Link>
             </Flex>
         </Flex >
     )

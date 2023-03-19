@@ -38,8 +38,10 @@ import { configureChains, createClient, WagmiConfig } from 'wagmi';
 import { mainnet, polygon, optimism, arbitrum } from 'wagmi/chains';
 import { alchemyProvider } from 'wagmi/providers/alchemy';
 import { publicProvider } from 'wagmi/providers/public';
+import { v4 as uuidv4 } from 'uuid';
 
-export const YourContributions = () => {
+
+export const YourContributions = ({ address }: { address: string }) => {
     const router = useRouter()
     const [projects, setProjects] = useState([])
 
@@ -65,6 +67,7 @@ export const YourContributions = () => {
                 const res = await axios.get('./api/crowdsale', {
                     params: {
                         _sortBy: 'mostUpvotes',
+                        _take: '4'
                     },
                 });
                 const { data } = res

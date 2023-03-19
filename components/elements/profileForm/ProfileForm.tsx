@@ -21,10 +21,12 @@ import NextLink from 'next/link';
 import * as routes from '../../../constants/routes';
 import { Formik, Form, Field, FieldProps, FastField } from 'formik'
 import * as yup from 'yup'
+import Jazzicon, { jsNumberForAddress } from 'react-jazzicon'
+
 
 
 export interface ProfileFormValues {
-    imgUrl: string,
+    // imgUrl: string,
     name: string,
     bio: string,
     twitter: string,
@@ -32,6 +34,7 @@ export interface ProfileFormValues {
 }
 
 interface ProfileFormProps {
+    address: string,
     // isFetching: boolean
     isUser: boolean
     prefillUser?: ProfileFormValues
@@ -50,19 +53,20 @@ const validationSchema = yup.object().shape({
 
 export const ProfileForm = ({
     // isFetching,
+    address,
     isUser,
     prefillUser,
     onSubmit,
 }: ProfileFormProps) => {
 
     let initialValues = prefillUser ? prefillUser : {
-        imgUrl: '',
+        // imgUrl: '',
         name: '',
         bio: '',
         twitter: '',
         primaryFunction: '',
     }
-
+    console.log(address)
     return (
 
         <Formik
@@ -94,11 +98,11 @@ export const ProfileForm = ({
                         <Circle
                             position="relative"
                             size={['160px', null, '200px']}
-                            backgroundColor="grey.100"
                             overflow="hidden"
                             mb='40px'
                         >
-                            {initialValues.imgUrl ? (
+                            <Jazzicon diameter={100} seed={jsNumberForAddress(address)} />
+                            {/* {initialValues.imgUrl ? (
                                 <Image
                                     src={initialValues.imgUrl}
                                     alt="profile image"
@@ -111,7 +115,7 @@ export const ProfileForm = ({
                                     width="64px"
                                     color="blackAlpha.300"
                                 />
-                            )}
+                            )} */}
                         </Circle>
                         <Flex
                             mb='40px'
