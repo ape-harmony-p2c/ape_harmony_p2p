@@ -22,7 +22,7 @@ Holders of NFTs can now use Ape Harmony P2C to create requests for funding from 
 
 **Where does this funding come from?**
 
-Of course these NFT holders can use their savings or spare ETH in their metamask but...
+### Of course these NFT holders can use their savings or spare ETH in their metamask but...
 
 Wouldn't wouldn't it be more effective if we provided the means to monetize assets which they already have including the NFTs in the collection they want to support? Not only do we provide an ecosystem where NFT holders seeking funding can do so in a frictionless way, but through integration with protocols like Pooled NFT we also provide potential funders with the means to leverage their holdings.
 
