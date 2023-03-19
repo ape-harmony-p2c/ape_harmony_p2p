@@ -9,7 +9,8 @@ import {
     FormHelperText,
     Textarea,
     Input,
-    Button
+    Button,
+    FormErrorMessage
 } from '@chakra-ui/react'
 import { useRouter } from 'next/router';
 import NextLink from 'next/link';
@@ -23,15 +24,22 @@ export const CreateProposalForm = () => {
     const formik = useFormik({
       initialValues: {
           description: '',
-          projectName: '0.01',
+          projectName: '',
+          endDate: '' 
       },
       validationSchema: yup.object({
-          ticketPrice: yup
+          projectName: yup
               .string()
               .required(),
-          reservePrice: yup
+          fundingGoal: yup
               .string()
-              .required()
+              .required(),
+          endDate: yup
+            .string()
+            .required(),
+          token: yup
+            .string()
+            .required()
       }),
       onSubmit: (values) => {
           console.log('values', values)
@@ -39,7 +47,6 @@ export const CreateProposalForm = () => {
   });
 
     const { getFieldProps, handleSubmit, errors } = formik
-
 
     return (
       <>
@@ -59,15 +66,15 @@ export const CreateProposalForm = () => {
                 />
             </FormControl>
               <FormControl mb={[4]}>
-                <FormLabel fontSize={['2xl']} htmlFor='seekingAmount' mb={[1]}>Funding Goal</FormLabel>
+                <FormLabel fontSize={['2xl']} htmlFor='fundingGoal' mb={[1]}>Funding Goal</FormLabel>
                 <FormHelperText fontSize={['m']} mt={[0]}>How much cash do you need?</FormHelperText>
                 <Input
-                  id='seekingAmount'
+                  id='fundingGoal'
                   type='text'
                   rounded={4}
                   color={'black'}
                   bgColor={'darkgray'}
-                  {...getFieldProps('seekingAmount')}
+                  {...getFieldProps('fundingGoal')}
                   mt={3}
                   />
             </FormControl>
@@ -119,7 +126,8 @@ export const CreateProposalForm = () => {
                 Submit
               </Button> 
             </Flex>
-          </FormControl>
+            <FormErrorMessage mt='none' mb='.25rem' fontSize='9px' textAlign={['center', null, null, 'initial']}>Please fill out all of the fields.</FormErrorMessage>
+            </FormControl>
         </form>
       </>
     )
