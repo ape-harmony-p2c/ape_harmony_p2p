@@ -37,11 +37,11 @@ export const AboutSection = () => {
     return (
         <>
         <Box>
-            <Heading size={['3xl', null, null, '3xl']} color='#A1F408'>
+            <Heading size={['3xl', null, null, '3xl']} color='#A1F408' pb={['.5rem']}>
                 Come build with us!
             </Heading>
-            <Text size='lg' color='white'>
-                Built by communities.<br />Built for communities.<br />Build for &#40;insert some other cheesy shit&#41;
+            <Text size='lg' color='white' px='2rem' textAlign='center'>
+                Built by communities. Built for communities. Built to &#40;insert some other cheesy shit&#41;
             </Text>          
         </Box>  
         </>
