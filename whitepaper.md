@@ -34,6 +34,10 @@ For example Jason a BAYC holder wants to fund Amy another BAYC holder for a proj
 
 **********
 
+###Ape Harmony P2C is _the first Peer to **Community** funding ecosystem_
+
+______________
+
 ### CROWDFUNDING for NFTs
 
 The crowdfunding market is more than 24 billion USD and is virtually non-existent in the NFT economy. Why is that? When an NFT collection mints it is in fact a kind of pre-sale but against some future more or less undefined utility. Crowdfunding is a form of pre-sale but with a well defined future utility, usually in the form of one or more of the products the creators are building. This model can certainly be applied within NFT communities as well.
