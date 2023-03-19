@@ -14,15 +14,17 @@ interface ProfileBarProps {
   bgColor: string,
   headingColor: string
   radius: number,
-  customPadding : number[] | undefined
+  customPadding : number[] | undefined,
+  title: string,
+  seeking: number
 }
 
-export const ProfileBar = ({ bgColor, headingColor, customPadding, radius }: ProfileBarProps) => {
+export const ProfileBar = ({ bgColor, headingColor, customPadding, radius, title, seeking }: ProfileBarProps) => {
     const router = useRouter()
 
     return (
       <Link href="/funding">
-        <Box bgColor={bgColor} rounded={radius} padding={customPadding}>
+        <Box bgColor={bgColor} rounded={radius} padding={customPadding} mt="4">
           <Flex>
             <Flex flexBasis={['20%','15%']} alignItems='center'>
               <Image alt='user-pfp' boxSize={58} rounded={30} bgColor='gray' justifyContent='center' src='/css-gradient.png'></Image>
@@ -31,13 +33,13 @@ export const ProfileBar = ({ bgColor, headingColor, customPadding, radius }: Pro
                   <Flex flexDir={'column'} align={['flex-start', 'center']} flexBasis={['33.33%']}>
                     <Heading size={['sm','md']} color={headingColor}>Project</Heading>
                     <Flex  grow={'1'}>
-                      <Text color={headingColor} fontSize={['12px', '16px']} textAlign={['left', 'center']}>Lazy Chicken Society</Text>
+                      <Text color={headingColor} fontSize={['12px', '16px']} textAlign={['left', 'center']}>{title}</Text>
                     </Flex>
                   </Flex>
                   <Flex flexDir={'column'} align={['flex-start', 'center']} flexBasis={['33.33%']}>
                     <Heading size={['sm','md']} color={headingColor}>Seeking</Heading>
                     <Flex grow={'1'}>
-                      <Text color={headingColor} fontSize={['12px', '16px']} textAlign={['left', 'center']}>$500 USDC</Text>
+                      <Text color={headingColor} fontSize={['12px', '16px']} textAlign={['left', 'center']}>{seeking} USDC</Text>
                     </Flex>
                   </Flex>
                   <Flex  flexDir={'column'} align={['flex-start', 'center']} flexBasis={['33.33%']}>
@@ -55,7 +57,7 @@ export const ProfileBar = ({ bgColor, headingColor, customPadding, radius }: Pro
               <Heading color={headingColor} mb={2} size={'sm'}>Sold: 20</Heading>
               <Heading color={headingColor} mb={2} size={'sm'}>Bought: 20</Heading>
             </Flex>
-            <Progress value={20} size='sm' colorScheme='pink' rounded={1}/>
+            <Progress value={(seeking / 20000) * 100 } size='sm' colorScheme='pink' rounded={1}/>
           </Box>
         </Box>
       </Link>
