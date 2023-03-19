@@ -42,10 +42,10 @@ export const RecentlyFunded = () => {
 
     return (
         <>        
-        <Accordion allowToggle>
+        <Accordion allowToggle w={['98%', null, null, '90%']}>
             <AccordionItem color='white'>
                 <h2>
-                <AccordionButton bgColor='#212C3B' border='1px solid #4E5D73' rounded='.25rem'>
+                <AccordionButton bgColor='#212C3B' rounded='.25rem'>
                     <Box as="span" flex='1' textAlign='left' fontSize={21} fontWeight='semibold'>
                     Recently Funded
                     </Box>
@@ -54,23 +54,6 @@ export const RecentlyFunded = () => {
                 </h2>
                 <AccordionPanel pb={4}>
                 <ProfileBar />
-                </AccordionPanel>
-            </AccordionItem>
-
-            <AccordionItem>
-                <h2>
-                <AccordionButton>
-                    <Box as="span" flex='1' textAlign='left'>
-                    Section 2 title
-                    </Box>
-                    <AccordionIcon />
-                </AccordionButton>
-                </h2>
-                <AccordionPanel pb={4}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo consequat.
                 </AccordionPanel>
             </AccordionItem>
         </Accordion>

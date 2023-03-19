@@ -13,9 +13,12 @@ import {
 
 export const HomePage = () => {
     return (
-        <Box bgColor='#0F0F16' padding='10rem'>
+        <Box bgColor='#0F0F16' pt={140} w='100vw' h='100vh'>
             <AboutSection />
-            <RecentlyFunded />
+            <Flex flexDir={'column'} align={'center'}>
+                <RecentlyFunded />
+                <TopFunders />
+            </Flex>
         </Box>
     )
 }
