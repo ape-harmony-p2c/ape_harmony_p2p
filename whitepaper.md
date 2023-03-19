@@ -62,7 +62,7 @@ We predict this will be used mostly for smaller projects in the beginning but it
 
 **************
 
-### Didn't have time to write a short letter... so wrote a long one
+### Not Your NFT, Not Your Community
 
 ________________
 
