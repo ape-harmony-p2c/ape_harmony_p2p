@@ -55,7 +55,6 @@ export const Filter = () => {
                     },
                 });
                 const { data } = res
-                console.log(data)
                 setProjects(data)
             } catch (error) {
                 console.log(error)
@@ -75,7 +74,7 @@ export const Filter = () => {
                 <TabPanels py={5}>
                     {
                         projects && projects.map((project) => (
-                            <ProfileBar title={project.title} seeking={project.seeking} bgColor={'#212C3B'} headingColor={'white'} radius={6} customPadding={[3, 5]} key={uuidv4()} />
+                            <ProfileBar id={project.id} title={project.title} seeking={project.seeking} bgColor={'#212C3B'} headingColor={'white'} radius={6} customPadding={[3, 5]} key={uuidv4()} />
                         ))
                     }
                     <TabPanel>
