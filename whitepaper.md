@@ -14,7 +14,7 @@ _GO FUND YOURSELF!_
 
 ______________
 
-APE HARMONY... _It's time to start creating!_
+APE HARMONY... _Time to start creating!_
 
 *************
 
