@@ -27,7 +27,7 @@ export const Filter = () => {
     const router = useRouter()
 
     return (
-            <Tabs px={2} variant='soft-rounded' colorScheme='whatsapp' size={['sm', 'md', 'lg']} >
+            <Tabs variant='soft-rounded' colorScheme='whatsapp' size={['sm', 'md', 'lg']} >
                 <TabList>
                     <Tab color={'white'}>Top</Tab>
                     <Tab color={'white'}>Latest</Tab>

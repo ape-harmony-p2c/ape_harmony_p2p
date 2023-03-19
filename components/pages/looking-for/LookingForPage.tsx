@@ -31,8 +31,8 @@ export const LookingForPage = () => {
     }
 
     return (
-        <Box bgColor='#0F0F16' pt={90} w='100vw' h='100vh'>
-            <Heading px={2} size={['xl', null, null, '2xl']} color='white' pb={3}>
+        <Box bgColor='#0F0F16' pt={90} w='100vw' h='100vh' px={[2, 3, null, 6]}>
+            <Heading size={['xl', null, null, '2xl']} color='white' pb={3}>
                Discover Proposals
             </Heading>
             <Filter />
