@@ -26,11 +26,18 @@ import { ProfileBar } from '../profileBar';
 import axios from 'axios';
 import { v4 as uuidv4 } from 'uuid';
 
+type Project = {
+    title: string,
+    id: number,
+    seeking: number,
+
+}
+
 export const Filter = () => {
     const router = useRouter()
-    const [projects, setProjects] = useState([])
+    const [projects, setProjects] = useState<Project[]>([])
 
-    const handleClick = async (filter: string) => {
+    const handleClick = async (filter?: string) => {
         console.log(filter)
         try {
             const res = await axios.get('./api/crowdsale', {

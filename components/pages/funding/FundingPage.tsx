@@ -161,7 +161,7 @@ export const FundingPage: NextPage<FundingPageProps> = ({csid}: FundingPageProps
             <Flex align="center" direction="column" width="60%">
                 <Text fontSize='1.25rem' color='white' ml='.5rem'>{crowdSale.title}</Text>
                 <Spacer />
-                <Flex align="center" direction="column">
+                <Flex align="center" direction="column" w="100%">
                     <Box bgColor='#212C3B' rounded='6' padding={[3, 5]} w='100%' p={4} mt="4" color='white'>
                         <Flex align="center" direction="column" justify="space-between">
                             <Text fontSize='1.25rem' color='white' ml='.5rem'>{crowdSale.body}</Text>
