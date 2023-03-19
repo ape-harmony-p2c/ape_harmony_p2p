@@ -1,5 +1,5 @@
 PROBLEM: 
-NFT creators lack a project funding, pre-sales and communnity engegement tool
+NFT creators lack a project funding, pre-sales and community engagement tool
 
 SOLUTION: 
 Community Funding solution for NFT IP owners and creators. 
@@ -26,7 +26,7 @@ Utilizing social media marketing: interconnecting with NFT creators, marketplace
 KEY FEATURES
 All actions are shareable on social media. 
 The tool allows to search for projects with filters and produces lists: Funded projects, new proposals, etc.
-Gamification instruments: the most popular projects, those who fund the most projects, etc would receive diferent incentives.
+Gamification instruments: the most popular projects, those who fund the most projects, etc would receive different incentives.
 
 TECH: 
 PooledNFT, Etherium, React, Solarium, 

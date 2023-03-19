@@ -22,15 +22,15 @@ ______________
 
 The biggest problem facing creators is the difficulty in raising sufficient financing in order to produce content or products on a professional level. For example in Hollywood, the typical pipeline from development to distribution of films can take several years, and this is magnified when the creators are newcomers operating on a grassroots level. The hunt for financing can be long and difficult, and connecting your investors and bankers to the distributor or studio in order to close the deal, requires engaging attorneys and others with similar experience.
 
-Ape Harmony changes the rules of this shitty game. We enable creators who are also members of NFT communities like Bored Apes or Pudgy Penguins, to create funding rounds targeted at those who would benefit most from their projects - other members of their NFT community. Only holders of a Bored Ape can create a funding round in the Bored Ape funding hub on Ape Harmony. But anyone can invest in them. That's huge.
+Ape Harmony changes the rules of this game. We enable creators to propose funding rounds in Ape Harmony "funding hubs" specific to an NFT community like Bored Apes or Pudgy Penguins, so the project is targeted at those who would benefit most from their projects - members of their NFT community. Every NFT collection would benefit from creators building or making something utilizing their NFT's IP. This is a big win for both the NFT holders and the creators.
 
 ### Where does this funding come from?
 
 **Of course these NFT holders can use their savings or spare ETH in their metamask but...**
 
-Wouldn't wouldn't it be more effective if we provided the means to monetize assets which they already have including the NFTs in the collection they want to support? Not only do we provide an ecosystem where NFT holders seeking funding can do so in a frictionless way, but through integration with protocols like Pooled NFT we also provide potential funders with the means to leverage their holdings.
+Wouldn't it be more effective if we provided the means to monetize assets which they already have including the NFTs in the collection they want to support? Not only do we provide an ecosystem where NFT holders seeking funding can do so in a frictionless way, but through integration with protocols like Pooled NFT we also provide potential funders with the means to leverage their holdings.
 
-For example Jason a BAYC holder wants to fund Amy another BAYC holder for a project she is working on to create a new brand of headphones called ApeRoar because let's face it, Beats is not the only good brand name for headphones. Jason can deposit his NFT in the BAYC pool on Pooled NFT directly from the Ape Harmony UI, and purchase the ERC20 tokens representing contributions to Amy's project. And all this can be done without ever even leaving the Ape Harmony ecosystem.
+For example Jason a BAYC holder wants to fund Amy for a project she is working on to create a new brand of headphones called ApeRoar because let's face it, Beats is not the only good brand name for headphones. Jason can deposit his NFT in the BAYC pool on Pooled NFT directly from the Ape Harmony UI, and purchase the ERC20 tokens representing contributions to Amy's project. And all this can be done without ever even leaving the Ape Harmony ecosystem.
 
 **********
 
@@ -58,9 +58,9 @@ ______________
 
 We understand that a primary objective for all NFT collections is the development of their IP. Whether this be in the form of cartoons, comic books, YouTube videos, toys and merchandise, branding of a new soft drink, or a petting zoo with real apes, utilizing the IP in new and creative ways is a major goal of every NFT collection.
 
-Holders of NFTs can now use Ape Harmony P2C to create requests for funding from other holders of their NFT. This is peer to community funding. The use cases are wide but this will usually be to create something which develops the IP of the NFT in question. Otherwise why would the community want to fund it?
+Holders of NFTs can now use Ape Harmony P2C to create requests for funding from holders of any NFT. This is peer to community funding. The use case is to create something which develops the IP of the NFT in question. Otherwise why would the community want to fund it?
 
-We predict this will be used mostly for smaller projects in the beginning but it certainly would work for humungous ones as well. Sure Warner Bros or Dreamworks might make a deal to license the Bored Apes and make a movie out of it like they do with everything else good or bad. Remember the movie Battleship based on the old tabletop game? How about the Angry Birds animated film? Do we really want those guys handling our IP to make a movie from our beloved NFT collections? Nahhhh.
+We predict this will be used mostly for smaller projects in the beginning but it certainly would work for big ones as well. Sure Warner Bros or Dreamworks might make a deal to license the Bored Apes and make a movie out of it like they do with everything else good or bad. Remember the movie Battleship based on the old tabletop game? How about the Angry Birds animated film? Do we really want those guys handling our IP to make a movie from our beloved NFT collections? Nahhhh.
 
 **************
 
@@ -70,13 +70,11 @@ ________________
 
 ### HOW IT WORKS
 
-Using Ape Harmoeny P2C is simple. Every NFT collection can create its own funding hub on Ape Harmony P2C simply by connecting any wallet with an NFT from that collection to the Ape Harmony contract. Remember, only owners of that specific NFT have access to post requests for funding but all users have access to view the content on the funding hub as well as contribute funds to funding rounds. 
+Using Ape Harmoeny P2C is simple. You simply go to https://apeharmony.com and choose the NFT community you wish to propose or fund a project in. If you fund one, you will be given an ERC20 token in proportion to the amount you funded which will be used to calculate the distributions from the project after it's completed.
 
-**FUNDING HUBS** are the primary point of reference for every NFT and its community on the Ape Harmony ecosystem. For example BAYC will have its own subdomain p2c.bayc.apeharmony.com where all comnunity funding functionality is available to the holder of any BAYC NFT. When a user visits a funding hub, he will see all the NFTs relating to that collection on his profile. For example Bored Ape holder Jason will see on his Ape Harmony profile all the NFTs in his wallet which give him member privileges in the BAYC funding hub. 
+**FUNDING HUBS** are the primary point of reference for every NFT and its community on the Ape Harmony ecosystem. For example BAYC will have its own subdomain p2c.bayc.apeharmony.com where all comnunity funding functionality is available to the holder of any BAYC NFT.
 
-**MEMBER PRIVILEGES** for holders of an NFT in the collection means the ability to create new rounds ie. requests for funding. In all other ways the UI will appear the same for both holders and non-holders. All member privilege configurations are user defined. This defaults to include the holder of any NFT in the collection (for example any BAYC holder) but as this is set by the NFT collection's deployer wallet, the BAYC funding hub can also be configured to give member privileges to anyone with a BAYC, MAYC, Otherside Deed, or any other NFT as well.
-
-**FUNDING ROUNDS** are what visitors will see when visiting the funding hub of an NFT collection on Ape Harmony. They appear as a list of such requests for funding associated with that NFT collection eg. BAYC, and are organized like Reddit threads. New rounds are like the first post in a Reddit thread and every post after that is like a comment. Again only holders of that NFT collection are allowed to create rounds ie. start a thread, but anyone can comment in the thread after it is created. 
+**FUNDING ROUNDS** are what visitors will see when visiting the funding hub of an NFT collection on Ape Harmony. They appear as a list of such requests for funding associated with that NFT collection eg. BAYC, and are organized like Reddit threads. New rounds are like the first post in a Reddit thread and every post after that is like a comment.
 
 Rounds are divided into two categories: COMPLETED and ACTIVE.
 
@@ -99,9 +97,7 @@ ___________
 
 Every round must include the amount the creator is seeking and the formula for distribution of value from the project being funded. This can be in either ETH, an ERC20 token specific to the funding hub's NFT collection like for example the ERC20 received in exchange for depositing your NFT on "Pooled NFTs", or some other form of value such as NFTs with some utility attached to it.
 
-As mentioned, the default configuartion is that anyone can contribute to any funding round. This can be changed to only allow contributions from specific users based on NFT holdings or other criteria, but as the goal is to bring in more funding not less, the primary use case will be that anyone is allowed to contribute to any funding round.
-
-When a user contributes to a round he receives ERC20 tokens specific to that round in amount proportional to his contributions. When the project distributes value back to the contributors of the round, the user receives an amopunt in proportion to his tokens. These ERC20 tokens are how the contract keeps track of what each contributor is entitled to.
+Anyone can contribute to any funding round. When a user contributes to a round he receives ERC20 tokens specific to that round in amount proportional to his contributions. When the project distributes value back to the contributors of the round, the user receives an amopunt in proportion to his tokens. These ERC20 tokens are how the contract keeps track of what each contributor is entitled to.
 
 The ERC20 tokens of each round can themselves be traded on the open market. Although we do not ourselves fund liquidity pools for these tokens which would directly create monetary value, as the primary purpose of these tokens is to create value in our own ecosystem ie. the "Disney dollars" model, it is possible that the round tokens themselves could have value outside our ecosystem as well through trading by users and other third parties.
 
