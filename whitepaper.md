@@ -103,7 +103,9 @@ When a user contributes to a round he receives ERC20 tokens specific to that rou
 
 The ERC20 tokens of each round can themselves be traded on the open market. Although we do not ourselves fund liquidity pools for these tokens which would directly create monetary value, as the primary purpose of these tokens is to create value in our own ecosystem ie. the "Disney dollars" model, it is possible that the round tokens themselves could have value outside our ecosystem as well through trading by users and other third parties.
 
-### OK What Else
+____________
+
+### Anything Else?
 
 The main purpose of funding rounds is to utilize the IP of the NFT collection and in so doing provide utility and increase the value of the entire NFT collection, but the rounds can be used for whatever the funding proposer chooses. This kickstarter style funding is just one of the many ways that Ape Harmony will provide functionality to NFT holders for monetization and leveraging of the value of their NFTs.
 
