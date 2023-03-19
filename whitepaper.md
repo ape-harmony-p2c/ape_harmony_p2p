@@ -16,7 +16,7 @@ _or whatever_
 
 ***********
 
-_The first Peer to **Community** funding ecosystem_
+**Ape Harmony P2C**: _The first Peer to **Community** funding ecosystem_
 
 *************
 
