@@ -16,14 +16,15 @@ interface ProfileBarProps {
   radius: number,
   customPadding : number[] | undefined,
   title: string,
-  seeking: number
+  seeking: number,
+  id: number
 }
 
-export const ProfileBar = ({ bgColor, headingColor, customPadding, radius, title, seeking }: ProfileBarProps) => {
+export const ProfileBar = ({ bgColor, headingColor, customPadding, radius, title, seeking, id }: ProfileBarProps) => {
     const router = useRouter()
 
     return (
-      <Link href="/funding">
+      <Link href={`/crowdsale/${id}`}>
         <Box bgColor={bgColor} rounded={radius} padding={customPadding} mt="4">
           <Flex>
             <Flex flexBasis={['20%','15%']} alignItems='center'>
@@ -53,11 +54,10 @@ export const ProfileBar = ({ bgColor, headingColor, customPadding, radius, title
             </Flex>
           </Flex>
           <Box mt={6}>
-            <Flex justifyContent={'space-between'}>
-              <Heading color={headingColor} mb={2} size={'sm'}>Sold: 20</Heading>
-              <Heading color={headingColor} mb={2} size={'sm'}>Bought: 20</Heading>
+            <Flex justifyContent={'end'}>
+              <Heading color={headingColor} mb={2} size={'sm'}>{((20000 - seeking) / 20000 * 100 ).toFixed(2)}%</Heading>
             </Flex>
-            <Progress value={(seeking / 20000) * 100 } size='sm' colorScheme='pink' rounded={1}/>
+            <Progress value={(20000 - seeking) / 20000 * 100 } size='sm' colorScheme='pink' rounded={1}/>
           </Box>
         </Box>
       </Link>

@@ -27,7 +27,8 @@ import {
 import { SearchIcon, ArrowUpIcon, ArrowDownIcon } from '@chakra-ui/icons';
 import { NextPage } from 'next'
 import { v4 as uuidv4 } from 'uuid';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 
 const description = `Sample project description. This project is going to change the world. Please fund and help me take this project to the moon 🚀🚀🚀.`
 
@@ -40,17 +41,17 @@ const project = {
     funders: [
         {
             name: "Alice",
-            amount: 10,
+            amount: 100,
             image: 'https://bit.ly/dan-abramov',
         },
         {
             name: "Bob",
-            amount: 5,
+            amount: 50,
             image: 'https://bit.ly/dan-abramov',
         },
         {
             name: "Chuck",
-            amount: 15,
+            amount: 150,
             image: 'https://bit.ly/dan-abramov',
         }
     ],
@@ -71,7 +72,11 @@ const project = {
 
 }
 
-function SliderThumbWithTooltip() {
+interface SliderThumbProps {
+    max: number,
+  }
+
+function SliderThumbWithTooltip({ max }: SliderThumbProps) {
     const [sliderValue, setSliderValue] = useState(5)
     const [showTooltip, setShowTooltip] = useState(false)
     return (
@@ -79,19 +84,19 @@ function SliderThumbWithTooltip() {
         id='slider'
         defaultValue={5}
         min={0}
-        max={100}
+        max={max}
         colorScheme='teal'
         onChange={(v) => setSliderValue(v)}
         onMouseEnter={() => setShowTooltip(true)}
         onMouseLeave={() => setShowTooltip(false)}
       >
-        <SliderMark value={25} mt='1' ml='-2.5' fontSize='sm'>
+        <SliderMark value={max * .25} mt='1' ml='-2.5' fontSize='sm'>
           25%
         </SliderMark>
-        <SliderMark value={50} mt='1' ml='-2.5' fontSize='sm'>
+        <SliderMark value={max * .50} mt='1' ml='-2.5' fontSize='sm'>
           50%
         </SliderMark>
-        <SliderMark value={75} mt='1' ml='-2.5' fontSize='sm'>
+        <SliderMark value={max * .75} mt='1' ml='-2.5' fontSize='sm'>
           75%
         </SliderMark>
         <SliderTrack>
@@ -103,7 +108,7 @@ function SliderThumbWithTooltip() {
           color='white'
           placement='top'
           isOpen={showTooltip}
-          label={`${sliderValue}`}
+          label={`${sliderValue} USDC`}
         >
           <SliderThumb />
         </Tooltip>
@@ -111,23 +116,57 @@ function SliderThumbWithTooltip() {
     )
   }
 
+  interface FundingPageProps {
+    csid: string | undefined,
+  }
 
+type CrowdSale = {
+    title: string,
+    body: string,
+    seeking: string,
+    info: string
 
-export const FundingPage: NextPage = () => {
+}
+
+export const FundingPage: NextPage<FundingPageProps> = ({csid}: FundingPageProps) => {
     const [sliderValue, setSliderValue] = useState(5);
     const [showTooltip, setShowTooltip] = useState(false);
     const [theme, SetTheme] = useState('dark');
+    const [crowdSale, setCrowdSale] = useState<CrowdSale>({
+        title: '',
+        body: '',
+        seeking: '',
+        info: ''
+    })
+
+    useEffect(() => {
+        async function fetchData() {
+            try {
+                const res = await axios.get('/api/crowdsale', {
+                    params: {
+                        _crowdSaleId: csid,
+                    },
+                });
+                const { data } = res
+                setCrowdSale(data)
+            } catch (error) {
+                console.log(error)
+            }
+        }
+        fetchData();
+      }, []);
+
     return (
         <Flex justify="center" bgColor='#0F0F16' pt={90} px={[2, 3, null, 6]}>
             <Flex align="center" direction="column" width="60%">
-                <Text fontFamily='Syne Tactile' fontSize='1.25rem' color='white' ml='.5rem'>{project.title}</Text>
+                <Text fontSize='1.25rem' color='white' ml='.5rem'>{crowdSale.title}</Text>
                 <Spacer />
-                <Flex align="center" direction="column">
+                <Flex align="center" direction="column" w="100%">
                     <Box bgColor='#212C3B' rounded='6' padding={[3, 5]} w='100%' p={4} mt="4" color='white'>
                         <Flex align="center" direction="column" justify="space-between">
-                            <Text fontFamily='Syne Tactile' fontSize='1.25rem' color='white' ml='.5rem'>{project.description}</Text>
+                            <Text fontSize='1.25rem' color='white' ml='.5rem'>{crowdSale.body}</Text>
                             <Spacer />
-                            <Flex justify="start" width="100%" mt="10">
+                            <Flex justify="start" width="100%" mt="10" gap="3">
                                 <IconButton
                                 colorScheme='blue'
                                 aria-label='Search database'
@@ -144,21 +183,20 @@ export const FundingPage: NextPage = () => {
                     <Spacer />
                     <Box bgColor='#212C3B' rounded='6' w='100%' p={4} mt="4" color='white'>
                         <Flex align="center" direction="column">
-                            <Text fontFamily='Syne Tactile' fontSize='1.25rem' color='white' ml='.5rem'>Goal: {project.goal}</Text>
-                            <Text fontFamily='Syne Tactile' fontSize='1.25rem' color='white' ml='.5rem'>Revenue Share: {project.revenue}</Text>
-                            <Text fontFamily='Syne Tactile' fontSize='1.25rem' color='white' ml='.5rem'>Equity: {project.equity}</Text>
+                            <Text fontSize='1.25rem' color='white' ml='.5rem'>Goal: {crowdSale.seeking} USDC</Text>
+                            <Text fontSize='1.25rem' color='white' ml='.5rem'>Revenue Share: {project.revenue}</Text>
+                            <Text fontSize='1.25rem' color='white' ml='.5rem'>Equity: {project.equity}</Text>
                         </Flex>
                     </Box>
                     <Spacer />
                     <Box bgColor='#212C3B' rounded='6' w='100%' p={4} mt="4" color='white'>
                         <Flex align="center" direction="column" justify="space-between">
-                            <Text fontFamily='Syne Tactile' fontSize='1.25rem' color='white' ml='.5rem'>Fund this Project</Text>
+                            <Text fontSize='1.25rem' color='white' ml='.5rem'>Fund this Project</Text>
                             <Spacer />
-                            <SliderThumbWithTooltip />
+                            <SliderThumbWithTooltip max={Number(crowdSale.seeking)} />
                             <Flex justify="start" width="100%" mt="10">
                                 <Button 
                                     size={['sm', null, 'lg']}
-                                    onClick={() => { setLocation('fundings') }}
                                     rounded='.75rem'
                                     color='teal'
                                     variant={'ghost'}
@@ -176,14 +214,13 @@ export const FundingPage: NextPage = () => {
                 </Flex>
                 <Spacer />
                 <Flex width="100%" direction="column" mt="4">
-                    <Text fontFamily='Syne Tactile' fontSize='1.25rem' color='white' ml='.5rem'>Funders</Text>
+                    <Text fontSize='1.25rem' color='white' ml='.5rem'>Funders</Text>
                     
                         {project && project.funders && project.funders.map((funder) => (
                             <Box bgColor='#212C3B' rounded='6' w='100%' p={4} mt="2" color='white' key={uuidv4()}>
                                 <Flex align="center" >
-                                    <Image boxSize='50px' src={funder.image} alt='Dan Abramov' />
-                                    <Text fontFamily='Syne Tactile' fontSize='1.25rem' color='white' ml='.5rem' >{funder.name}</Text>
-                                    <Text fontFamily='Syne Tactile' fontSize='1.25rem' color='white' ml='.5rem' >{funder.amount}</Text>
+                                    <Image alt='user-pfp' boxSize={58} rounded={30} bgColor='gray' justifyContent='center' src='/css-gradient.png'></Image>
+                                    <Text fontSize='1.25rem' color='white' ml='.5rem' >{funder.amount} USDC</Text>
                                     <Progress value={funder.amount} size='sm' colorScheme='pink' rounded={1}/>
                                 </Flex>
                             </Box>
@@ -197,8 +234,8 @@ export const FundingPage: NextPage = () => {
                         {project && project.comments && project.comments.map((comment) => (
                             <Box bgColor='#212C3B' rounded='6' w='100%' p={4} mt="2" color='white' key={uuidv4()}>
                                 <Flex align="center" >
-                                    <Text fontFamily='Syne Tactile' fontSize='1.25rem' color='white' ml='.5rem' >{comment.name}:</Text>
-                                    <Text fontFamily='Syne Tactile' fontSize='1.25rem' color='white' ml='.5rem' >{comment.text}</Text>
+                                    <Image alt='user-pfp' boxSize={58} rounded={30} bgColor='gray' justifyContent='center' src='/css-gradient.png'></Image>
+                                    <Text fontSize='1.25rem' color='white' ml='.5rem' >{comment.text}</Text>
                                 </Flex>
                             </Box>
                         ))}
