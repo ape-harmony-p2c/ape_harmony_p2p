@@ -5,7 +5,6 @@ import { RecentlyFunded } from '@/components/elements/recentlyFunded'
 import { TopFunders } from '@/components/elements/topFunders'
 
 import { memo, useContext } from 'react'
-import { UserContext } from '@/contexts/userContext'
 
 import {
     Flex,
@@ -14,8 +13,6 @@ import {
 } from '@chakra-ui/react'
 
 export const HomePage = () => {
-    const user = useContext(UserContext)
-    console.log(user)
     return (
         <>
          <Box bgColor='#0F0F16' pt={140} w='100vw' h='100vh'>
@@ -27,7 +24,6 @@ export const HomePage = () => {
         </Box>
         <Flex justify="center">
             <Flex align="center" direction="column" height="100vh" width="60vw">
-                <Text>{user.address}</Text>
                 <Text>Home</Text>
             </Flex>
         </Flex>
