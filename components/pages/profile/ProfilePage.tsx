@@ -19,7 +19,7 @@ export interface ProfileFormValues {
     twitter: string,
     primaryFunction: string,
 }
-export const ProfilePage = ({ address }: { address: string | undefined }) => {
+export const ProfilePage = ({ address }: { address: string | string[] | undefined }) => {
     // Status state
     const [isFetching, setIsFetching] = useState(false)
     const [isUser, setIsUser] = useState(false)

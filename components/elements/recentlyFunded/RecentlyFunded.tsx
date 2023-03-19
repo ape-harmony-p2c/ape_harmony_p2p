@@ -47,13 +47,13 @@ export const RecentlyFunded = () => {
                     <h2>
                         <AccordionButton bgColor='#212C3B' rounded='.25rem'>
                             <Box as="span" flex='1' textAlign='left' fontSize={21} fontWeight='semibold'>
-                                Your Contributions
+                                Recently Funded
                             </Box>
                             <AccordionIcon />
                         </AccordionButton>
                     </h2>
                     <AccordionPanel pb={4}>
-                        <ProfileBar bgColor={'initial'} headingColor={'white'} customPadding={[0]} radius={0} />
+                        <ProfileBar bgColor={'initial'} headingColor={'white'} customPadding={[0]} radius={0} title={'Bored Ape Water'} seeking={6300} />
                     </AccordionPanel>
                 </AccordionItem>
             </Accordion>

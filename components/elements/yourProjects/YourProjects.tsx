@@ -77,7 +77,7 @@ export const YourProjects = ({ address }: { address: string | string[] | undefin
                     },
                 });
                 const { data } = res
-                console.log(data)
+                console.log(80, data)
                 setProjects(data)
             } catch (error) {
                 console.log(error)

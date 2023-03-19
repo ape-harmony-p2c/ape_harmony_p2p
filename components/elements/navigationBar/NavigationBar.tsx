@@ -3,10 +3,9 @@ import {
     Flex,
     Link,
     Button,
-    Show,
-    Hide
+    useColorMode,
+    IconButton
 } from '@chakra-ui/react'
-// import { GiHamburgerMenu } from 'react-icons/gi'
 import { useRouter } from 'next/router';
 import NextLink from 'next/link';
 import * as routes from '../../../constants/routes';
@@ -14,6 +13,7 @@ import '@rainbow-me/rainbowkit/styles.css';
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 import { UserContext } from '@/contexts/userContext';
 import { useAccount } from 'wagmi';
+import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 
 
 export const NavigationBar = () => {
@@ -28,6 +28,10 @@ export const NavigationBar = () => {
     // if (sessionsInfo.address) {
     //     setAddress(sessionsInfo.address)
     // }
+    const [isHovered, setIsHovered] = useState(false);
+
+    const { colorMode, toggleColorMode } = useColorMode()
+
 
     return (
         <Flex
@@ -37,21 +41,20 @@ export const NavigationBar = () => {
             width={["100%"]}
             mb={'40px'}
         >
-            < Flex mt={'20px'} ml={['30px', null, '40px', '80px', '0px']} >
+            < Flex mt={'20px'} px={[2, 3, null, 6]} >
                 <Link as={NextLink} href={routes.HOME}>
                     <Button
                         size={['sm', null, 'lg']}
                         onClick={() => { setLocation('home') }}
-                        borderColor={location === 'home' ? 'teal' : 'none'}
+                        borderColor={location === 'home' ? '#A1F408' : 'none'}
                         border={location === 'home' ? '2px' : 'none'}
                         bgColor={location === 'home' ? 'gray.100' : 'none'}
                         mr={['10px', null, null, '20px']}
-                        color='teal'
+                        color='#A1F408'
                         variant={'ghost'}
                         rounded='.75rem'
                         aria-label='home'
-                        p='.75rem'
-                    >
+                        p='.75rem'>
                         Home
                     </Button>
                 </Link>
@@ -60,15 +63,15 @@ export const NavigationBar = () => {
                         size={['sm', null, 'lg']}
                         onClick={() => { setLocation('fundings') }}
                         rounded='.75rem'
-                        color='teal'
+                        color='#A1F408'
                         variant={'ghost'}
-                        aria-label='fund stuff'
+                        aria-label='Discover'
                         p='.75rem'
-                        borderColor={location === 'fundings' ? 'teal' : 'none'}
+                        borderColor={location === 'fundings' ? '#A1F408' : 'none'}
                         border={location === 'fundings' ? '2px' : 'none'}
                         bgColor={location === 'fundings' ? 'gray.100' : 'none'}
                     >
-                        Looking For
+                        Discover
                     </Button>
                 </Link>
                 {address &&
@@ -98,9 +101,17 @@ export const NavigationBar = () => {
                         largeScreen: 'full',
                     }}
                 />
-
+                <IconButton
+                    ml={4}
+                    onClick={toggleColorMode}
+                    icon={colorMode === "light" ? <MoonIcon /> : <SunIcon color={'orange'} />}
+                    aria-label="Toggle light/dark mode"
+                    borderRadius="full"
+                    _hover={{ bg: "gray.300" }}
+                    onMouseEnter={() => setIsHovered(true)}
+                    onMouseLeave={() => setIsHovered(false)}
+                />
             </Flex>
-
         </Flex >
     )
 
