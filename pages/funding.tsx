@@ -28,7 +28,7 @@ import { NextPage } from 'next'
 import { v4 as uuidv4 } from 'uuid';
 import { useState } from 'react';
 
-const description = `Sample project description. This project is going to change the world. I am taking this project to the moon 🚀🚀🚀 so you better invest now.`
+const description = `Sample project description. This project is going to change the world. Please fund and help me take this project to the moon 🚀🚀🚀.`
 
 const project = {
     title: "Super Cool Project",
