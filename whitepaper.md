@@ -16,9 +16,7 @@ _or whatever_
 
 The biggest problem facing creators is the difficulty in raising sufficient financing in order to produce content or products on a professional level. For example in Hollywood, the typical pipeline from development to distribution of films can take several years, and this is magnified when the creators are newcomers operating on a grassroots level. The hunt for financing can be long and difficult, and connecting your investors and bankers to the distributor or studio in order to close the deal, requires engaging attorneys and others with similar experience.
 
-Ape Harmony changes the rules of this shitty game. We understand that a primary objective for all NFT collections is the development of their IP. Whether this be in the form of cartoons, comic books, YouTube videos, toys and merchandise, branding of a new soft drink, or a petting zoo with real apes, utilizing the IP in new and creative ways is a major goal of every NFT collection.
-
-Holders of NFTs can now use Ape Harmony P2C to create requests for funding from other holders of their NFT. This is peer to community funding. The use cases are wide but this will usually be to create something which develops the IP of the NFT in question. Otherwise why would the community want to fund it?
+Ape Harmony changes the rules of this shitty game. We enable creators who are also members of NFT communities like Bored Apes or Pudgy Penguins, to create funding rounds targeted at those who would benefit most from their projects - other members of their NFT community. Only holders of a Bored Ape can create a funding round in the Bored Ape funding hub on Ape Harmony. But anyone can invest in them. That's huge.
 
 ### Where does this funding come from?
 
@@ -30,7 +28,11 @@ For example Jason a BAYC holder wants to fund Amy another BAYC holder for a proj
 
 ### INCREASE IP VALUE FOR NFT COLLECTIONS
 
+We understand that a primary objective for all NFT collections is the development of their IP. Whether this be in the form of cartoons, comic books, YouTube videos, toys and merchandise, branding of a new soft drink, or a petting zoo with real apes, utilizing the IP in new and creative ways is a major goal of every NFT collection.
 
+Holders of NFTs can now use Ape Harmony P2C to create requests for funding from other holders of their NFT. This is peer to community funding. The use cases are wide but this will usually be to create something which develops the IP of the NFT in question. Otherwise why would the community want to fund it?
+
+### HOW DOES IT ALL WORK?
 
 Every NFT collection can create its own funding hub on Ape Harmony P2C simply by connecting any wallet with an NFT from that collection to the Ape Harmony contract. Only owners of that specific NFT have access to post requests for funding but all users have access to view the content on the funding hub as well as contribute funds to funding rounds. 
 
