@@ -1,41 +1,14 @@
 import {
     Box,
     Flex,
-    Link,
-    Button,
     Image,
-    HStack,
-    LinkBox,
-    LinkOverlay,
-    IconButton,
-    Menu,
-    MenuButton,
-    MenuList,
-    MenuItem,
     Text,
-    Show,
-    Hide,
     Heading,
-    Accordion,
-    AccordionButton,
-    AccordionItem,
-    AccordionIcon,
-    AccordionPanel,
     Progress
 } from '@chakra-ui/react'
-import { ChevronDownIcon } from '@chakra-ui/icons'
 import { useRouter } from 'next/router';
 import NextLink from 'next/link';
 import '@rainbow-me/rainbowkit/styles.css';
-
-import {
-    getDefaultWallets,
-    RainbowKitProvider,
-} from '@rainbow-me/rainbowkit';
-import { configureChains, createClient, WagmiConfig } from 'wagmi';
-import { mainnet, polygon, optimism, arbitrum } from 'wagmi/chains';
-import { alchemyProvider } from 'wagmi/providers/alchemy';
-import { publicProvider } from 'wagmi/providers/public';
 
 export const ProfileBar = () => {
     const router = useRouter()
