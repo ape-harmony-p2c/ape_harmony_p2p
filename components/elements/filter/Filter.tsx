@@ -71,6 +71,7 @@ export const Filter = () => {
       }, []);
 
     return (
+        <>
             <Tabs variant='soft-rounded' colorScheme='whatsapp' size={['sm', 'md', 'lg']} >
                 <TabList>
                     <Tab onClick={() => handleClick('mostUpvotes')} color={'white'}>Top</Tab>
@@ -78,7 +79,9 @@ export const Filter = () => {
                     <Tab onClick={() => handleClick('endingSoon')} color={'white'}>Ending Soon</Tab>
                     <Tab onClick={() => handleClick('complete')} color={'white'}>Complete</Tab>
                 </TabList>
-                <TabPanels py={5}>
+                <Flex justify={'flex-start'} py={2} px={[2, 3, null, 6]}>
+            </Flex>
+                <TabPanels py={0}>
                     {
                         projects && projects.length && projects.map((project) => (
                             <ProfileBar id={project.id} title={project.title} seeking={project.seeking} bgColor={'#212C3B'} headingColor={'white'} radius={6} customPadding={[3, 5]} key={uuidv4()} />
@@ -95,6 +98,7 @@ export const Filter = () => {
                     </TabPanel>
                 </TabPanels>
             </Tabs>
+        </>
     )
 
 }

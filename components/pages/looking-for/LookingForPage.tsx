@@ -1,12 +1,13 @@
 import { useState } from 'react'
-import NextLink from 'next/link'
+import Link from 'next/link'
 import { Filter } from '@/components/elements/filter'
 
 import {
     Flex,
     Text,
     Box,
-    Heading
+    Heading,
+    Button
 } from '@chakra-ui/react'
 
 const projectsMockData = [
@@ -31,10 +32,16 @@ export const LookingForPage = () => {
     }
 
     return (
-        <Box bgColor='#0F0F16' pt={90} w='100vw' h='100vh' px={[2, 3, null, 6]}>
+        <Box pt={90} w='100vw' h='100vh' px={[2, 3, null, 6]}>
+            <Flex justify={'space-between'}>
             <Heading size={['xl', null, null, '2xl']} color='white' pb={3}>
-               Discover Proposals
+               Discover
             </Heading>
+            <Link href='/create-proposal'>            
+            <Button>Get Funding</Button>
+            </Link>
+
+            </Flex>
             <Filter />
         </Box>
     )
