@@ -16,6 +16,8 @@ GO FUND YOURSELF!
 
 _or whatever_
 
+***********
+
 ### END TO END FINANCING FOR CREATORS
 
 The biggest problem facing creators is the difficulty in raising sufficient financing in order to produce content or products on a professional level. For example in Hollywood, the typical pipeline from development to distribution of films can take several years, and this is magnified when the creators are newcomers operating on a grassroots level. The hunt for financing can be long and difficult, and connecting your investors and bankers to the distributor or studio in order to close the deal, requires engaging attorneys and others with similar experience.
